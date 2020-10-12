@@ -21,6 +21,10 @@
         <?= $this->include('layout/footer'); ?>
     </div>
 </div>
+
+<?= $this->include('layout/buttonup'); ?>
+
+<?= $this->include('layout/modal'); ?>
    
 
    

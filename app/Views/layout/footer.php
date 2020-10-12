@@ -1,8 +1,3 @@
-<?= $this->extend('layout/page_layout'); ?>
-
-
-
-<?= $this->section('content'); ?>
 
  <!-- Footer -->
     <footer class="sticky-footer bg-white">
@@ -13,6 +8,3 @@
         </div>
     </footer>
       <!-- End of Footer -->
-
-
-<?= $this->endSection(); ?>

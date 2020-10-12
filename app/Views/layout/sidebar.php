@@ -1,6 +1,3 @@
-<?= $this->extend('layout/page_layout'); ?>
-
-<?= $this->section('content'); ?>
 
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -115,6 +112,3 @@
 
 </ul>
 <!-- End of Sidebar -->
-
-
-<?= $this->endSection(); ?>
