@@ -1,10 +1,10 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Kamera extends BaseController
 {
-	public function index()
+	public function tambahKamera()
 	{
-		return view('adminpages/home');
+		return view('adminpages/tambah_kamera');
 	}
 
 	//--------------------------------------------------------------------

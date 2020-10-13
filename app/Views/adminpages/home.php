@@ -299,4 +299,4 @@
           </div>
 
 
-<?= $this->endSection; ?>
+<?= $this->endSection(); ?>

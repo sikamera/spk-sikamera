@@ -9,45 +9,47 @@
     <link href="theme/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 <body id="page-top"> 
-<div class="wrapper">
-    <?= $this->include('layout/sidebar'); ?>
-    <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-            <?= $this->include('layout/navbar'); ?>
-            <div class="container-fluid">
-                <?= $this->renderSection('content'); ?>
+
+    <div id="wrapper">
+
+        <?= $this->include('layout/sidebar'); ?>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <?= $this->include('layout/navbar'); ?>
+
+                <div class="container-fluid">
+
+                    <?= $this->renderSection('content'); ?>
+                
+                </div>
             </div>
+            <?= $this->include('layout/footer'); ?>
         </div>
-        <?= $this->include('layout/footer'); ?>
     </div>
-</div>
 
-<?= $this->include('layout/buttonup'); ?>
+    <?= $this->include('layout/buttonup'); ?>
 
-<?= $this->include('layout/modal'); ?>
+    <?= $this->include('layout/modal'); ?>
    
 
-   
-
-   
-
-    
-    
     <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="theme/vendor/jquery/jquery.min.js"></script>
+  <script src="theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="theme/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="theme/js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="theme/vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="theme/js/demo/chart-area-demo.js"></script>
+  <script src="theme/js/demo/chart-pie-demo.js"></script>
 </body>
 </html>

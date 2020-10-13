@@ -7,7 +7,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin Sikamera</div>
     </a>
 
 <!-- Divider -->
@@ -25,20 +25,20 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-  Interface
+  Data User & Kamera
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
-    <span>Components</span>
+    <i class="fas fa-fw fa-user"></i>
+    <span>Data User</span>
   </a>
   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Custom Components:</h6>
-      <a class="collapse-item" href="buttons.html">Buttons</a>
-      <a class="collapse-item" href="cards.html">Cards</a>
+      <h6 class="collapse-header">Data User:</h6>
+      <a class="collapse-item" href="buttons.html">Users</a>
+      <a class="collapse-item" href="cards.html">Tambah User</a>
     </div>
   </div>
 </li>
@@ -46,16 +46,15 @@
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-    <i class="fas fa-fw fa-wrench"></i>
-    <span>Utilities</span>
+    <i class="fas fa-fw fa-camera"></i>
+    <span>Data Kamera</span>
   </a>
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Custom Utilities:</h6>
-      <a class="collapse-item" href="utilities-color.html">Colors</a>
-      <a class="collapse-item" href="utilities-border.html">Borders</a>
-      <a class="collapse-item" href="utilities-animation.html">Animations</a>
-      <a class="collapse-item" href="utilities-other.html">Other</a>
+      <h6 class="collapse-header">Data Kamera:</h6>
+      <a class="collapse-item" href="utilities-color.html">Canon</a>
+      <a class="collapse-item" href="utilities-border.html">Nikon</a>
+      <a class="collapse-item" href="tambah_kamera">Tambah Kamera</a>
     </div>
   </div>
 </li>
