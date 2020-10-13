@@ -10,17 +10,18 @@
 
 <div class="card">
 <div class="card-body">
-<form>
+<form action="/kamera/save" method="post">
+<?= csrf_field(); ?>
     <div class="form-group">
         <div class="custom-control custom-radio">
             <div class="row" style="margin: 0 auto;">
                 <div class="col-xl-3 col-md-6 mb-4">
-                    <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
-                    <label class="custom-control-label" for="customRadio1">Nikon</label>
+                    <input class="custom-control-input" value="Nikon" <?php if($brand == 'Nikon') echo 'checked="checked"'; ?> id="brand-nikon" type="radio" name="brand">
+                    <label class="custom-control-label" for="brand-nikon">Nikon</label>
                 </div>
                 <div class="col-xl-3 col-md-6 mb-4">
-                    <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
-                    <label class="custom-control-label" for="customRadio2">Canon</label>
+                    <input class="custom-control-input" id="brand-canon" value="Canon"  <?php if($brand == 'Canon') echo 'checked="checked"'; ?>  type="radio" name="brand">
+                    <label class="custom-control-label" for="brand-canon">Canon</label>
                 </div>
             </div>
         </div>
@@ -29,108 +30,108 @@
         <div class="col">
             <h5 class="text-lg font-weight-800">Spesifikasi Teknis  :</h5>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Tipe Kamera</label>
-                <input type="text" name="tipe-kamera" id="tipe-kamera" class="form-control form-control-solid">
+                <label for="type">Tipe Kamera</label>
+                <input type="text" name="type" id="type" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Tanggal rilis Kamera</label>
-                <input type="date" name="tipe-kamera" id="tipe-kamera" class="form-control form-control-solid">
+                <label for="release_date">Tanggal rilis Kamera</label>
+                <input type="date" name="release_date" id="realese_date" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Harga Kamera</label>
-                <input type="number" name="harga" id="harga" class="form-control form-control-solid">
+                <label for="price">Harga Kamera</label>
+                <input type="number" name="price" id="price" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Tipe Sensor</label>
-                <select name="" id="" class="form-control form-control-solid">
-                    <option value="">APS-C/DX (crop frame)</option>
-                    <option value="">FX (full frame)</option>
+                <label for="sensor_type">Tipe Sensor</label>
+                <select name="sensor_type" id="sensor_type" class="form-control form-control-solid">
+                    <option value="crop frame">APS-C/DX (crop frame)</option>
+                    <option value="full frame">FX (full frame)</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Resolusi kamera</label>
-                <input type="text" name="" id="" class="form-control form-control-solid">
+                <label for="resolution">Resolusi kamera</label>
+                <input type="text" name="resolution" id="resolution" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">ISO kamera</label>
-                <input type="text" name="" id="" class="form-control form-control-solid">
+                <label for="iso">ISO kamera</label>
+                <input type="text" name="iso" id="iso" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Shutter Speed kamera</label>
-                <input type="text" name="" id="" class="form-control form-control-solid">
+                <label for="shutter">Shutter Speed kamera</label>
+                <input type="text" name="shutter" id="shutter" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Ukuran layar</label>
-                <input type="text" name="" id="" class="form-control form-control-solid">
+                <label for="lcd">Ukuran layar</label>
+                <input type="text" name="lcd" id="lcd" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Resolusi Video</label>
-                <input type="text" name="" id="" class="form-control form-control-solid">
+                <label for="video_resolution">Resolusi Video</label>
+                <input type="text" name="video_resolution" id="video_resolution" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Flash Kamera :</label>
+                <label for="flash">Flash Kamera :</label>
                 <div class="custom-control custom-radio">
-                    <input class="custom-control-input" id="customRadio3" type="radio" name="customRadio">
-                    <label class="custom-control-label" for="customRadio3">Ya</label>
+                    <input class="custom-control-input" id="flashya" type="radio" name="flash">
+                    <label class="custom-control-label" for="flashya">Ya</label>
                 </div>
                 <div class="custom-control custom-radio">  
-                    <input class="custom-control-input" id="customRadio4" type="radio" name="customRadio">
-                    <label class="custom-control-label" for="customRadio4">Tidak</label>
+                    <input class="custom-control-input" id="flashno" type="radio" name="flash">
+                    <label class="custom-control-label" for="flashno">Tidak</label>
                 </div>
             </div>
         </div>
         <div class="col">
             <h5 class="text-lg">Konektifitas :</h5>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Bluetooth</label>
-                <select name="" id="" class="form-control form-control-solid">
-                    <option value="">Ya</option>
-                    <option value="">tidak</option>
+                <label for="bluetooth">Bluetooth</label>
+                <select name="bluetooth" id="bluetooth" class="form-control form-control-solid">
+                    <option value="1">Ya</option>
+                    <option value="0">tidak</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Wifi</label>
-                <select name="" id="" class="form-control form-control-solid">
-                    <option value="">Ya</option>
-                    <option value="">tidak</option>
+                <select name="wifi" id="wifi" class="form-control form-control-solid">
+                    <option value="1">Ya</option>
+                    <option value="0">tidak</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect2">NFC</label>
-                <select name="" id="" class="form-control form-control-solid">
-                    <option value="">Ya</option>
-                    <option value="">tidak</option>
+                <select name="nfc" id="nfc" class="form-control form-control-solid">
+                    <option value="1">Ya</option>
+                    <option value="0">tidak</option>
                 </select>
             </div>
             <h5 class="text-lg">Dimensi :</h5>
             <div class="form-group">
-                <label for="">Berat</label>
-                <input type="number" name="" id="" class="form-control form-control-solid">
+                <label for="weight">Berat</label>
+                <input type="number" name="weight" id="weight" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="">Panjang</label>
-                <input type="number" name="" id="" class="form-control form-control-solid">
+                <label for="long">Panjang</label>
+                <input type="number" name="long" id="long" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="">Lebar</label>
-                <input type="number" name="" id="" class="form-control form-control-solid">
+                <label for="width">Lebar</label>
+                <input type="number" name="width" id="width" class="form-control form-control-solid">
             </div>
             <div class="form-group">
-                <label for="">Tinggi</label>
-                <input type="number" name="" id="" class="form-control form-control-solid">
+                <label for="height">Tinggi</label>
+                <input type="number" name="height" id="height" class="form-control form-control-solid">
             </div>
 
             <hr>
 
             <div class="form-group">
-                <label for="">Gambar</label>
-                <input type="file" src="" alt="" class="form-control form-control-solid">
+                <label for="image">Gambar</label>
+                <input type="file" src="" alt="" id="image" name="image" class="form-control form-control-solid">
             </div>
         </div>
     </div>
 
    
-    <div class="form-group"><label for="exampleFormControlTextarea1">Deskripsi</label><textarea class="form-control form-control-solid" id="exampleFormControlTextarea1" rows="3"></textarea></div>
+    <div class="form-group"><label for="description">Deskripsi</label><textarea class="form-control form-control-solid" id="description" name="description" rows="3"></textarea></div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
