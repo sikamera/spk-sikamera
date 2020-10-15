@@ -8,7 +8,7 @@
 
 <div class="card">
     <div class="card-body">
-        <form action="user/save" method="post">
+        <form action="users/save" method="post">
             <div class="form-group">
                 <div class="row">
                     <div class="col">
