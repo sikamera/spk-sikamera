@@ -4,11 +4,11 @@ use CodeIgniter\Model;
 
 class KameraModel extends Model
 {
-    protected $tabel = 'kamera';
+    protected $table = 'kamera';
     protected $primaryKey = 'id_kamera';
     protected $useTimestamps = true;
     protected $allowedFields = ['id_kamera',
-                                 'brand',
+                                'brand',
                                  'type',
                                  'slug',
                                  'release_date',

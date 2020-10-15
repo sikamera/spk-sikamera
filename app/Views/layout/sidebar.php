@@ -38,7 +38,7 @@
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Data User:</h6>
       <a class="collapse-item" href="buttons.html">Users</a>
-      <a class="collapse-item" href="cards.html">Tambah User</a>
+      <a class="collapse-item" href="/tambah_user">Tambah User</a>
     </div>
   </div>
 </li>
@@ -54,7 +54,7 @@
       <h6 class="collapse-header">Data Kamera:</h6>
       <a class="collapse-item" href="utilities-color.html">Canon</a>
       <a class="collapse-item" href="utilities-border.html">Nikon</a>
-      <a class="collapse-item" href="kamera/tambah_kamera">Tambah Kamera</a>
+      <a class="collapse-item" href="/tambah_kamera">Tambah Kamera</a>
     </div>
   </div>
 </li>

@@ -13,18 +13,11 @@
 <form action="/kamera/save" method="post">
 <?= csrf_field(); ?>
     <div class="form-group">
-        <div class="custom-control custom-radio">
-            <div class="row" style="margin: 0 auto;">
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <input class="custom-control-input" value="Nikon" <?php if($brand == 'Nikon') echo 'checked="checked"'; ?> id="brand-nikon" type="radio" name="brand">
-                    <label class="custom-control-label" for="brand-nikon">Nikon</label>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <input class="custom-control-input" id="brand-canon" value="Canon"  <?php if($brand == 'Canon') echo 'checked="checked"'; ?>  type="radio" name="brand">
-                    <label class="custom-control-label" for="brand-canon">Canon</label>
-                </div>
-            </div>
-        </div>
+        <label for="brand">Brand</label>
+        <select name="brand" id="brand" class="form-control form-control-solid">
+            <option value="Nikon">Nikon</option>
+            <option value="Canon">Canon</option>
+        </select>
     </div>
     <div class="row">
         <div class="col">
@@ -70,14 +63,10 @@
             </div>
             <div class="form-group">
                 <label for="flash">Flash Kamera :</label>
-                <div class="custom-control custom-radio">
-                    <input class="custom-control-input" id="flashya" type="radio" name="flash">
-                    <label class="custom-control-label" for="flashya">Ya</label>
-                </div>
-                <div class="custom-control custom-radio">  
-                    <input class="custom-control-input" id="flashno" type="radio" name="flash">
-                    <label class="custom-control-label" for="flashno">Tidak</label>
-                </div>
+                <select name="flash" id="flash" class="form-control form-control-solid">
+                    <option value="1">Ya</option>
+                    <option value="0">tidak</option>
+                </select>
             </div>
         </div>
         <div class="col">
@@ -90,14 +79,14 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">Wifi</label>
+                <label for="wifi">Wifi</label>
                 <select name="wifi" id="wifi" class="form-control form-control-solid">
                     <option value="1">Ya</option>
                     <option value="0">tidak</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlSelect2">NFC</label>
+                <label for="nfc">NFC</label>
                 <select name="nfc" id="nfc" class="form-control form-control-solid">
                     <option value="1">Ya</option>
                     <option value="0">tidak</option>

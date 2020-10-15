@@ -5,6 +5,7 @@ use App\Models\KameraModel;
 class Kamera extends BaseController
 {
     protected $kameraModel;
+
     public function __construct() {
         $this->kameraModel = new KameraModel();
     }
@@ -21,10 +22,8 @@ class Kamera extends BaseController
     {
         $brand = $this->request->getVar('brand');
         $type = $this->request->getVar('type');
-        $slug = url_title($brand+" "+$type, '-', true);
-        $digit = 4;
-        $id = rand(pow(10, $digit-1), pow(10, $digit)-1);
-
+        $slug = url_title("$brand $type", '-', true);
+        $id = uniqid(rand(1,1000));
         $this->kameraModel->save([
             'id_kamera' => $id,
             'brand' => $this->request->getVar('brand'),
@@ -40,18 +39,18 @@ class Kamera extends BaseController
             'video_resolution'=>$this->request->getVar('video_resolution'),
             'flash'=>$this->request->getVar('flash'),
             'bluetooth'=>$this->request->getVar('bluetooth'),
-            'wifi' => $this->request-getcwd('wifi'),
+            'wifi' => $this->request->getVar('wifi'),
             'nfc'=>$this->request->getVar('nfc'),
             'weight'=>$this->request->getVar('weight'),
             'long'=>$this->request->getVar('long'),
             'width'=>$this->request->getVar('width'),
-            'height'=>$this->request->getVar('heigt'),
+            'height'=>$this->request->getVar('height'),
             'image'=>$this->request->getVar('image'),
             'description'=>$this->request->getVar('description')
         ]);
+        $this->kameraModel->errors();
 
 
-        return redirect()->to('/');
     }
 
 	//--------------------------------------------------------------------
