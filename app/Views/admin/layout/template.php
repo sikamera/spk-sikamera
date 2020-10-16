@@ -12,13 +12,13 @@
 
     <div id="wrapper">
 
-        <?= $this->include('layout/sidebar'); ?>
+        <?= $this->include('admin/layout/sidebar'); ?>
 
         <div id="content-wrapper" class="d-flex flex-column">
 
             <div id="content">
 
-                <?= $this->include('layout/navbar'); ?>
+                <?= $this->include('admin/layout/navbar'); ?>
 
                 <div class="container-fluid">
 
@@ -26,13 +26,13 @@
                 
                 </div>
             </div>
-            <?= $this->include('layout/footer'); ?>
+            <?= $this->include('admin/layout/footer'); ?>
         </div>
     </div>
 
-    <?= $this->include('layout/buttonup'); ?>
+    <?= $this->include('admin/layout/buttonup'); ?>
 
-    <?= $this->include('layout/modal'); ?>
+    <?= $this->include('admin/layout/modal'); ?>
    
 
     <!-- Bootstrap core JavaScript-->
