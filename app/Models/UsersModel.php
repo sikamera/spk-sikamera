@@ -9,4 +9,13 @@ class UsersModel extends Model
     protected $useTimestamps = true;
     protected $allowedFields = ['id_user', 'first_name', 'last_name', 'username', 'email', 'password', 'birthday', 'gender'];
 
+    public function getUser($username = false)
+    {
+        if ($username == false) {
+            return $this->findAll();
+        }
+        
+        return $this->where(['username' => $username])->first();
+    }
+
 }

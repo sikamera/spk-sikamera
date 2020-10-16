@@ -64,8 +64,8 @@
             <div class="form-group">
                 <label for="flash">Flash Kamera :</label>
                 <select name="flash" id="flash" class="form-control form-control-solid">
-                    <option value="1">Ya</option>
-                    <option value="0">tidak</option>
+                    <option value="Y">Ya</option>
+                    <option value="N">tidak</option>
                 </select>
             </div>
         </div>
@@ -74,22 +74,22 @@
             <div class="form-group">
                 <label for="bluetooth">Bluetooth</label>
                 <select name="bluetooth" id="bluetooth" class="form-control form-control-solid">
-                    <option value="1">Ya</option>
-                    <option value="0">tidak</option>
+                    <option value="Y">Ya</option>
+                    <option value="N">tidak</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="wifi">Wifi</label>
                 <select name="wifi" id="wifi" class="form-control form-control-solid">
-                    <option value="1">Ya</option>
-                    <option value="0">tidak</option>
+                    <option value="Y">Ya</option>
+                    <option value="N">tidak</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="nfc">NFC</label>
                 <select name="nfc" id="nfc" class="form-control form-control-solid">
-                    <option value="1">Ya</option>
-                    <option value="0">tidak</option>
+                    <option value="Y">Ya</option>
+                    <option value="N">tidak</option>
                 </select>
             </div>
             <h5 class="text-lg">Dimensi :</h5>

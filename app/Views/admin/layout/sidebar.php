@@ -37,7 +37,7 @@
   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Data User:</h6>
-      <a class="collapse-item" href="buttons.html">Users</a>
+      <a class="collapse-item" href="/users">Users</a>
       <a class="collapse-item" href="/tambah_user">Tambah User</a>
     </div>
   </div>
@@ -52,8 +52,7 @@
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Data Kamera:</h6>
-      <a class="collapse-item" href="utilities-color.html">Canon</a>
-      <a class="collapse-item" href="utilities-border.html">Nikon</a>
+      <a class="collapse-item" href="/kamera">Kamera</a>
       <a class="collapse-item" href="/tambah_kamera">Tambah Kamera</a>
     </div>
   </div>

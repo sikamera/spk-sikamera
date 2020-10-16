@@ -12,12 +12,21 @@ class Users extends BaseController
 
 	public function index()
 	{
-		return view('admin/pages/home');
+        $data = [
+            'judul'=> 'Data Users',
+            'users' => $this->usersModel->getUser()
+        ];
+
+		return view('admin/users/index', $data);
     }
     
     public function tambah_user()
     {
-        return view('admin/users/tambah_user');
+        $data = [
+            'judul'=> 'Tambah User'
+        ];
+
+        return view('admin/users/tambah_user', $data);
     }
 
     public function save()

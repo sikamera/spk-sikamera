@@ -30,4 +30,13 @@ class KameraModel extends Model
                                  'image',
                                  'description'];
 
+    public function getKamera($slug = false)
+    {
+        if ($slug == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
+
 }

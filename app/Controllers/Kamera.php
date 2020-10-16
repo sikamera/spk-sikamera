@@ -9,13 +9,23 @@ class Kamera extends BaseController
     public function __construct() {
         $this->kameraModel = new KameraModel();
     }
+
     public function index()
     {
-      
+      $data = [
+          'judul' => 'Data Kamera',
+          'kamera' => $this->kameraModel->getKamera()
+      ];
+      return view('admin/kamera/index', $data);
     }
+
 	public function tambah_kamera()
 	{
-		return view('admin/kamera/tambah_kamera');
+        $data = [
+            'judul' => 'Tambah Kamera'
+        ];
+        
+		return view('admin/kamera/tambah_kamera', $data);
     }
     
     public function save()
@@ -35,18 +45,18 @@ class Kamera extends BaseController
             'resolution' => $this->request->getVar('resolution'),
             'iso' => $this->request->getVar('iso'),
             'shutter' => $this->request->getVar('shutter'),
-            'lcd'=>$this->request->getVar('lcd'),
-            'video_resolution'=>$this->request->getVar('video_resolution'),
-            'flash'=>$this->request->getVar('flash'),
-            'bluetooth'=>$this->request->getVar('bluetooth'),
+            'lcd'=> $this->request->getVar('lcd'),
+            'video_resolution'=> $this->request->getVar('video_resolution'),
+            'flash'=> $this->request->getVar('flash'),
+            'bluetooth'=> $this->request->getVar('bluetooth'),
             'wifi' => $this->request->getVar('wifi'),
-            'nfc'=>$this->request->getVar('nfc'),
-            'weight'=>$this->request->getVar('weight'),
-            'long'=>$this->request->getVar('long'),
-            'width'=>$this->request->getVar('width'),
-            'height'=>$this->request->getVar('height'),
-            'image'=>$this->request->getVar('image'),
-            'description'=>$this->request->getVar('description')
+            'nfc'=> $this->request->getVar('nfc'),
+            'weight'=> $this->request->getVar('weight'),
+            'long'=> $this->request->getVar('long'),
+            'width'=> $this->request->getVar('width'),
+            'height'=> $this->request->getVar('height'),
+            'image'=> $this->request->getVar('image'),
+            'description'=> $this->request->getVar('description')
         ]);
         $this->kameraModel->errors();
 
