@@ -19,6 +19,18 @@ class Kamera extends BaseController
       return view('admin/kamera/index', $data);
     }
 
+    public function detail($slug)
+    {
+        $data = [
+            'judul' => 'Detail Kamera',
+            'kamera' => $this->kameraModel->getKamera($slug)
+        ];
+        if (empty($data['kamera'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException($slug. ' tidak ditemukan!');
+        }
+        return view('admin/kamera/detail', $data);
+    }
+
 	public function tambah_kamera()
 	{
         $data = [

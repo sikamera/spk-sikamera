@@ -13,7 +13,7 @@
                 <?php foreach($kamera as $kam): ?>
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card shadow h-100 py-2">
-                        <a href="">
+                        <a href="/kamera/<?= $kam['slug']; ?>">
                             <img src="/img/kamera/<?= $kam['image']; ?>" alt="thumbnail" class="card-img-top" width="50px" height="100%">
                         </a>
                         <div class="card-body">

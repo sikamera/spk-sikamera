@@ -45,8 +45,7 @@
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <h6 class="collapse-header">Data Kamera:</h6>
-      <a class="collapse-item" href="/kamera">Kamera</a>
-      <a class="collapse-item" href="/tambah_kamera">Tambah Kamera</a>
+      <a class="collapse-item" href="/kamera">Semua Kamera</a>
     </div>
   </div>
 </li>
