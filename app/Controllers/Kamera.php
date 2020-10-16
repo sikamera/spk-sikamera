@@ -15,7 +15,7 @@ class Kamera extends BaseController
     }
 	public function tambah_kamera()
 	{
-		return view('kamera/tambah_kamera');
+		return view('admin/kamera/tambah_kamera');
     }
     
     public function save()
