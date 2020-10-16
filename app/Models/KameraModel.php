@@ -7,28 +7,23 @@ class KameraModel extends Model
     protected $table = 'kamera';
     protected $primaryKey = 'id_kamera';
     protected $useTimestamps = true;
-    protected $allowedFields = ['id_kamera',
-                                'brand',
-                                 'type',
-                                 'slug',
-                                 'release_date',
-                                 'price',
-                                 'sensor_type',
-                                 'resolution',
-                                 'iso',
-                                 'shutter',
-                                 'lcd',
-                                 'video_resolution',
-                                 'flash',
-                                 'bluetooth',
-                                 'wifi',
-                                 'nfc',
-                                 'weight',
-                                 'long',
-                                 'width',
-                                 'height',
-                                 'image',
-                                 'description'];
+    protected $allowedFields = ['brand',
+                                'type',
+                                'slug',
+                                'release_date',
+                                'price',
+                                'image',
+                                'description',
+                                'max_resolution',
+                                'pixels',
+                                'sensor_size',
+                                'iso',
+                                'lens',
+                                'focus',
+                                'screen',
+                                'shutter',
+                                'weight',
+                                'dimension'];
 
     public function getKamera($slug = false)
     {
