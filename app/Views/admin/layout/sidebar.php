@@ -32,22 +32,16 @@
 <li class="nav-item">
   <a class="nav-link" href="/users">
     <i class="fas fa-fw fa-user"></i>
-    <span>Data User</span>
+    <span>Users</span>
   </a>
 </li>
 
 <!-- Nav Item - Utilities Collapse Menu -->
 <li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+  <a class="nav-link collapsed" href="/kamera">
     <i class="fas fa-fw fa-camera"></i>
-    <span>Data Kamera</span>
+    <span>Kamera</span>
   </a>
-  <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Data Kamera:</h6>
-      <a class="collapse-item" href="/kamera">Semua Kamera</a>
-    </div>
-  </div>
 </li>
 
 <!-- Divider -->

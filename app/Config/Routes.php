@@ -31,6 +31,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/kamera/tambah_kamera', 'Kamera::tambah_kamera');
 $routes->get('/kamera/(:segment)', 'Kamera::detail/$1');
 
 
