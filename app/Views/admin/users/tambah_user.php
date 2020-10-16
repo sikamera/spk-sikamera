@@ -6,23 +6,23 @@
     <h1 class="h3 mb-0 text-gray-800">Tambah Data User</h1>
 </div>
 
-<div class="card">
+<div class="card shadow mb-4">
     <div class="card-body">
-        <form action="users/save" method="post">
+        <form action="/users/save" method="post">
             <div class="form-group">
                 <div class="row">
                     <div class="col">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name">First Name <i class="red-color">*</i></label>
                         <input type="text" class="form-control form-control-solid" id="first_name" name="first_name">
                     </div>
                     <div class="col">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name">Last Name <i class="red-color">*</i></label>
                         <input type="text" class="form-control form-control-solid" id="last_name" name="last_name">
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">Username <i class="red-color">*</i></label>
                 <input type="text" class="form-control form-control-solid" id="username" name="username">
             </div>
             <div class="form-group">
@@ -37,11 +37,11 @@
                 </select>            
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email <i class="red-color">*</i></label>
                 <input type="email" class="form-control form-control-solid" id="email" name="email">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Password <i class="red-color">*</i></label>
                 <input type="password" class="form-control form-control-solid" id="password" name="password">
             </div>
             <div class="form-group">
