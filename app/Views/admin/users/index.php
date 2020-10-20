@@ -31,16 +31,16 @@
                     <?php $index = 1; ?>
                     <?php foreach($users as $user): ?>
                         <tr>
-                            <th><?= $index++; ?></th>
-                            <th><img src="<?=$user['image']; ?>" alt="image"></th>
-                            <th><?= $user['first_name']; ?></th>
-                            <th><?= $user['last_name']; ?></th>
-                            <th><?= $user['username']; ?></th>
-                            <th><?= $user['birthday']; ?></th>
-                            <th><?= $user['gender']; ?></th>
-                            <th><?= $user['email']; ?></th>
-                            <th><?= $user['password']; ?></th>
-                            <th><a class="btn btn-circle btn-danger" href="#"><i class="fas fa-trash"></i></a></th>
+                            <td><?= $index++; ?></th>
+                            <td><img src="<?=$user['image']; ?>" alt="image"></td>
+                            <td><?= $user['first_name']; ?></td>
+                            <td><?= $user['last_name']; ?></td>
+                            <td><?= $user['username']; ?></td>
+                            <td><?= $user['birthday']; ?></td>
+                            <td><?= $user['gender']; ?></td>
+                            <td><?= $user['email']; ?></td>
+                            <td><?= $user['password']; ?></td>
+                            <td><a class="btn btn-circle btn-danger" href="#"><i class="fas fa-trash"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
