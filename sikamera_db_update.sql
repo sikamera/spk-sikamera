@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2020 at 05:50 AM
+-- Generation Time: Oct 21, 2020 at 05:31 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -41,12 +41,23 @@ CREATE TABLE `alternative` (
 --
 
 CREATE TABLE `criteria` (
-  `id_criteria` int(10) NOT NULL,
-  `criteria` varchar(5) NOT NULL,
+  `id_criteria` varchar(5) NOT NULL,
   `information` varchar(30) NOT NULL,
   `weight` int(5) NOT NULL,
   `atribute` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `criteria`
+--
+
+INSERT INTO `criteria` (`id_criteria`, `information`, `weight`, `atribute`) VALUES
+('C1', 'ISO Maksimum', 2, 'Benefit'),
+('C2', 'Resolusi Foto', 1, 'Benefit'),
+('C3', 'Ukuran sensor', 2, 'Benefit'),
+('C4', 'Titik Fokus', 1, 'Benefit'),
+('C5', 'Shutter Speed Maksimum', 1, 'Benefit'),
+('C6', 'Harga', 3, 'Cost');
 
 -- --------------------------------------------------------
 
