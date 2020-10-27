@@ -99,6 +99,12 @@ class Kamera extends BaseController
 
     public function delete($id)
     {
+        $kamera = $this->kameraModel->find($id);
+
+       if ($kamera['image'] != 'default.jpg') {
+            unlink('img/kamera/'.$kamera['image']);
+       }
+
         $this->kameraModel->delete($id);
         return redirect()->to('/kamera');
     }
