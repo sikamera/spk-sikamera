@@ -12,6 +12,7 @@
 <div class="card-body">
 <form action="/kamera/update/<?= $kamera['id_kamera']; ?>" method="post" enctype="multipart/form-data">
 <?= csrf_field(); ?>
+<input type="hidden" name="slug" value="<?= $kamera['slug']; ?>">
 <div class="card">
     <div class="card-header border-bottom">
         <ul class="nav nav-tabs card-header-tabs" id="cardTab" role="tablist">

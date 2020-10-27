@@ -34,7 +34,8 @@ class Kamera extends BaseController
 	public function tambah_kamera()
 	{
         $data = [
-            'judul' => 'Tambah Kamera'
+            'judul' => 'Tambah Kamera',
+            'validation'=> \Config\Services::validation()
         ];
         
 		return view('admin/kamera/tambah_kamera', $data);
@@ -113,10 +114,48 @@ class Kamera extends BaseController
     {
         $data = [
             'judul' => 'Edit Data Kamera',
-            'kamera'=> $this->kameraModel->getKamera($slug)
+            'kamera'=> $this->kameraModel->getKamera($slug),
+            'validation'=> \Config\Services::validation()
         ];
         
 		return view('admin/kamera/edit', $data);
+    }
+
+    public function update($id){
+        if (!$this->validate([
+            ''
+        ])) {
+            # code...
+        }
+
+
+        $brand = $this->request->getVar('brand');
+        $type = $this->request->getVar('type');
+        $slug = url_title("$brand $type", '-', true);
+        $this->kameraModel->save([
+            'id' => $id,
+            'brand' => $this->request->getVar('brand'),
+            'type'=> $this->request->getVar('type'),
+            'slug'=>$slug,
+            'release_date' =>$this->request->getVar('release_date'),
+            'price'=>$this->request->getVar('price'),
+            'image'=>$this->request->getVar('image'),
+            'description'=>$this->request->getVar('description'),
+            'max_resolution'=> $this->request->getVar('max_resolution'),
+            'pixels'=>$this->request->getVar('pixels'),
+            'sensor_size'=>$this->request->getVar('sensor_size'),
+            'iso' => $this->request->getVar('iso'),
+            'lens'=>$this->request->getVar('lens'),
+            'focus'=>$this->request->getVar('focus'),
+            'screen'=>$this->request->getVar('screen'),
+            'shutter'=>$this->request->getVar('shutter'),
+            'weight'=>$this->request->getVar('weight'),
+            'dimension'=>$this->request->getVar('dimension')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
+
+        return redirect()->to('/kamera');
     }
 
 	//--------------------------------------------------------------------
