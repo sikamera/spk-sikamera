@@ -109,6 +109,16 @@ class Kamera extends BaseController
         return redirect()->to('/kamera');
     }
 
+    public function edit($slug)
+    {
+        $data = [
+            'judul' => 'Edit Data Kamera',
+            'kamera'=> $this->kameraModel->getKamera($slug)
+        ];
+        
+		return view('admin/kamera/edit', $data);
+    }
+
 	//--------------------------------------------------------------------
 
 }

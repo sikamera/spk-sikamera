@@ -11,7 +11,7 @@
                 <div class="card-title h5 text-center">Rp. <?= $kamera['price']; ?></div>
             </div>
         </div>
-        <a href="" class="btn btn-icon-split btn-warning">
+        <a href="/kamera/edit/<?= $kamera['slug']; ?>" class="btn btn-icon-split btn-warning">
             <span class="icon "><i class="fas fa-pen"></i></span>
             <span class="text">Edit data kamera</span>
         </a>
