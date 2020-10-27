@@ -11,6 +11,10 @@
                 <div class="card-title h5 text-center">Rp. <?= $kamera['price']; ?></div>
             </div>
         </div>
+        <a href="" class="btn btn-icon-split btn-warning">
+            <span class="icon "><i class="fas fa-pen"></i></span>
+            <span class="text">Edit data kamera</span>
+        </a>
     </div>
     <div class="col">
         <div class="card shadow mb-4">
@@ -22,18 +26,50 @@
         <div class="card shadow mb-4">
             <div class="card-header text-center">Spesifikasi</div>
             <div class="card-body">
-                <div class="card-text">Resolusi     <?= $kamera['max_resolution']; ?></div>
-                <div class="card-text">Jumlah Pixels     <?= $kamera['pixels']; ?> MP</div>
-                <div class="card-text">Sensor Size     <?= $kamera['sensor_size']; ?></div>
-                <div class="card-text">ISO     <?= $kamera['iso']; ?></div>
-                <div class="card-text">Lens Mount     <?= $kamera['lens']; ?></div>
-                <div class="card-text">Titik Fokus     <?= $kamera['focus']; ?></div>
-                <div class="card-text">Screen     <?= $kamera['screen']; ?> Inch</div>
-                <div class="card-text">Shutter     <?= $kamera['shutter']; ?></div>
-                <div class="card-text">Berat     <?= $kamera['weight']; ?></div>
-                <div class="card-text">Dimension     (<?= $kamera['dimension']; ?>) mm</div>
-
-
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr class="text-center">
+                            <td>Resolusi</td>
+                            <td><?= $kamera['max_resolution']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Jumlah Pixels</td>
+                            <td><?= $kamera['pixels']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Sensor size</td>
+                            <td><?= $kamera['sensor_size']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>ISO</td>
+                            <td><?= $kamera['iso']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Lens Mount</td>
+                            <td><?= $kamera['lens']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Titik Fokus</td>
+                            <td><?= $kamera['focus']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Ukuran layar</td>
+                            <td><?= $kamera['screen']; ?></td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Shutter Speed</td>
+                            <td><?= $kamera['shutter']; ?></td>
+                        </tr class="text-center">
+                        <tr class="text-center">
+                            <td>Berat</td>
+                            <td><?= $kamera['weight']; ?> gram</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Dimension</td>
+                            <td>(<?= $kamera['dimension']; ?>) mm</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

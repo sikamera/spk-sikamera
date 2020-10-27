@@ -13,6 +13,7 @@
                         <th>Keterangan</th>
                         <th>Bobot</th>
                         <th>Atribut</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,7 @@
                         <td><?= $krit['information']; ?></td>
                         <td><?= $krit['weight']; ?></td>
                         <td><?= $krit['atribute']; ?></td>
+                        <td><a href="" class="btn btn-circle btn-success"><i class="fas fa-pen"></i></a></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
