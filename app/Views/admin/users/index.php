@@ -40,7 +40,13 @@
                             <td><?= $user['gender']; ?></td>
                             <td><?= $user['email']; ?></td>
                             <td><?= $user['password']; ?></td>
-                            <td><a class="btn btn-circle btn-danger" href="#"><i class="fas fa-trash"></i></a></td>
+                            <td>
+                            <form action="/users/<?= $user['id_user']; ?>" method="post">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-circle btn-danger float-right"><i class="fas fa-trash"></i></button>
+                            </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
