@@ -10,7 +10,7 @@
 
 <div class="card shadow mb-4">
 <div class="card-body">
-<form action="/kamera/save" method="post">
+<form action="/kamera/save" method="post" enctype="multipart/form-data">
 <?= csrf_field(); ?>
 <div class="card">
     <div class="card-header border-bottom">
@@ -46,8 +46,17 @@
                     <input type="text" id="price" name="price" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="image">Gambar </label>
-                    <input type="file" id="image" name="image" class="form-control">
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="image">Masukkan gambar....</label>
+                        <input type="file" id="image" name="image" class="custom-file-input" onchange="preview()">
+                    </div>              
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img src="img/kamera/default.jpg" class="img-thumbnail img-preview">
+                        </div>
+                    </div>     
                 </div>
                 <div class="form-group">
                     <label for="description">Deskripsi</label>

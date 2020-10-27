@@ -52,5 +52,23 @@
   <!-- Page level custom scripts -->
   <script src="theme/js/demo/chart-area-demo.js"></script>
   <script src="theme/js/demo/chart-pie-demo.js"></script>
+
+  <script>
+      const preview = ()=>{
+            const image = document.querySelector('#image')
+            const label = document.querySelector('.custom-file-label')
+            const imgPreview = document.querySelector('.img-preview')
+
+            label.textContent = image.files[0].name;
+
+            const fileImg = new FileReader();
+            fileImg.readAsDataURL(image.files[0]);
+
+            fileImg.onload = (e)=>{
+                imgPreview.src = e.target.result;
+            }
+        }
+     
+  </script>
 </body>
 </html>

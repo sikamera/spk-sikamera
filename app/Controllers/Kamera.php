@@ -42,6 +42,36 @@ class Kamera extends BaseController
     
     public function save()
     {
+        if (!$this->validate([
+            'type' => [
+                'rules'=> 'required|is_unique[kamera.type]',
+                'errors'=>[
+                    'required'=>'{field} kamera harus diisi.',
+                    'is_unique'=> '{field} Kamera sudah ada di database.'
+                ]
+            ],
+            'price'=>[
+                'rules'=> 'required',
+                'errors'=>[
+                    'required'=>'{field} kamera harus diisi.'
+                ]
+            ]
+
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/kamera/tambah_kamera')->withInput()->with('validation', $validation);
+        }
+        //gambar
+        $gambarKamera = $this->request->getFile('image');
+
+        if ($gambarKamera->getError() == 4) {
+            $namaImage = 'default.jpg';
+        }else{
+            $namaImage = $gambarKamera->getRandomName();
+            $gambarKamera->move('img/kamera', $namaImage);
+           
+        }
+
         $brand = $this->request->getVar('brand');
         $type = $this->request->getVar('type');
         $slug = url_title("$brand $type", '-', true);
@@ -51,7 +81,7 @@ class Kamera extends BaseController
             'slug'=>$slug,
             'release_date' =>$this->request->getVar('release_date'),
             'price'=>$this->request->getVar('price'),
-            'image'=>$this->request->getVar('image'),
+            'image'=>$namaImage,
             'description'=>$this->request->getVar('description'),
             'max_resolution'=> $this->request->getVar('max_resolution'),
             'pixels'=>$this->request->getVar('pixels'),
