@@ -20,7 +20,11 @@
                             <div class="card-title"><h3 class="text-center"><?= $kam['brand']." ".$kam['type']; ?></h3></div>
                         </div>
                         <div class="card-footer">
-                            <a href="/" class="btn btn-circle btn-danger float-right"><i class="fas fa-trash"></i></a>
+                            <form action="/kamera/<?= $kam['id_kamera']; ?>" method="post">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-circle btn-danger float-right"><i class="fas fa-trash"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>

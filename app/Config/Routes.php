@@ -32,7 +32,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/kamera/tambah_kamera', 'Kamera::tambah_kamera');
-$routes->get('/kamera/(:segment)', 'Kamera::detail/$1');
+$routes->delete('/kamera/(:num)', 'Kamera::delete/$1');
+$routes->get('/kamera/(:any)', 'Kamera::detail/$1');
 
 
 /**

@@ -67,6 +67,12 @@ class Kamera extends BaseController
         return redirect()->to('/kamera');
     }
 
+    public function delete($id)
+    {
+        $this->kameraModel->delete($id);
+        return redirect()->to('/kamera');
+    }
+
 	//--------------------------------------------------------------------
 
 }
