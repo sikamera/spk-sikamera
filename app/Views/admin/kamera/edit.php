@@ -13,6 +13,7 @@
 <form action="/kamera/update/<?= $kamera['id_kamera']; ?>" method="post" enctype="multipart/form-data">
 <?= csrf_field(); ?>
 <input type="hidden" name="slug" value="<?= $kamera['slug']; ?>">
+<input type="hidden" name="oldImage" value="<?= $kamera['image']; ?>">
 <div class="card">
     <div class="card-header border-bottom">
         <ul class="nav nav-tabs card-header-tabs" id="cardTab" role="tablist">
@@ -59,14 +60,14 @@
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
-                        <label class="custom-file-label" for="image">Masukkan gambar....</label>
+                        <label class="custom-file-label" for="image"><?= $kamera['image']; ?></label>
                         <input type="file" id="image" name="image" class="custom-file-input" onchange="preview()">
                     </div>              
                 </div>
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-2">
-                            <img src="img/kamera/default.jpg" class="img-thumbnail img-preview">
+                            <img src="/img/kamera/<?= $kamera['image']; ?>" class="img-thumbnail img-preview">
                         </div>
                     </div>     
                 </div>

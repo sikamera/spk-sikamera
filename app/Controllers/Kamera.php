@@ -148,6 +148,19 @@ class Kamera extends BaseController
             return redirect()->to('/kamera/edit/'.$this->request->getVar('slug'))->withInput();
         }
 
+        $fileImage = $this->request->getFile('image');
+
+        //cek gambar berubah enggak
+        if ($fileImage->getError() == 4) {
+            $namaImage = $this->request->getVar('oldImage');
+        }else {
+            $namaImage = $fileImage->getRandomName();
+
+            $fileImage->move('img/kamera', $namaImage);
+
+            unlink('img/kamera'.$this->request->getVar('oldImage'));
+        }
+
 
         $brand = $this->request->getVar('brand');
         $type = $this->request->getVar('type');
@@ -159,7 +172,7 @@ class Kamera extends BaseController
             'slug'=>$slug,
             'release_date' =>$this->request->getVar('release_date'),
             'price'=>$this->request->getVar('price'),
-            'image'=>$this->request->getVar('image'),
+            'image'=>$namaImage,
             'description'=>$this->request->getVar('description'),
             'max_resolution'=> $this->request->getVar('max_resolution'),
             'pixels'=>$this->request->getVar('pixels'),
