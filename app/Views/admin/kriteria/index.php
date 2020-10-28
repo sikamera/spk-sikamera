@@ -25,7 +25,7 @@
                         <td><?= $krit['information']; ?></td>
                         <td><?= $krit['weight']; ?></td>
                         <td><?= $krit['atribute']; ?></td>
-                        <td><a href="/home/editKriteria/<?= $krit['id_criteria']; ?>" class="btn btn-circle btn-success"><i class="fas fa-pen"></i></a></td>
+                        <td><a href="/kriteria/editKriteria/<?= $krit['id_criteria']; ?>" class="btn btn-circle btn-success"><i class="fas fa-pen"></i></a></td>
 
                     </tr>
                     <?php endforeach; ?>

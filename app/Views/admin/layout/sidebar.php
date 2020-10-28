@@ -54,7 +54,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-  <a class="nav-link collapsed" href="/home/kriteria" >
+  <a class="nav-link collapsed" href="/kriteria" >
     <i class="fas fa-fw fa-folder"></i>
     <span>Kriteria</span>
   </a>

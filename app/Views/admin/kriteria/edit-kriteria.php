@@ -9,7 +9,7 @@
         Edit Kriteria
     </div>
     <div class="card-body">
-        <form action="/home/update/<?= $kriteria['id_criteria']; ?>" method="post">
+        <form action="/kriteria/update/<?= $kriteria['id_criteria']; ?>" method="post">
             <?= csrf_field(); ?>
             <div class="form-group">
                 <label for="information">Kriteria</label>

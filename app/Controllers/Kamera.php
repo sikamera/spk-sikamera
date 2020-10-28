@@ -158,7 +158,7 @@ class Kamera extends BaseController
 
             $fileImage->move('img/kamera', $namaImage);
 
-            unlink('img/kamera'.$this->request->getVar('oldImage'));
+            unlink('img/kamera/'.$this->request->getVar('oldImage'));
         }
 
 

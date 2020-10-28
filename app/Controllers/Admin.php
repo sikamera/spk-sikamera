@@ -2,16 +2,15 @@
 
 use App\Models\KriteriaModel;
 
-class Home extends BaseController
+class Admin extends BaseController
 {
-
 	public function index()
 	{
 		$data = [
-			'judul' => 'Home'
+			'judul' => 'Admin'
 		];
-		return view('/index', $data);
-	}
+		return view('admin/pages/home', $data);
+    }
 
 	//--------------------------------------------------------------------
 
