@@ -6,9 +6,15 @@ class KriteriaModel extends Model
 {
     protected $table = 'criteria';
     protected $primaryKey = 'id_criteria';
+    protected $allowedFields = ['weight', 'atribute'];
 
-    public function getKriteria()
+    public function getKriteria($id=false)
     {
-        return $this->findAll();
+        if ($id == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['id_criteria'=>$id])->first();
+       
     }
 }

@@ -38,15 +38,24 @@
                 </div>
                 <div class="form-group">
                     <label for="type">Tipe Kamera</label>
-                    <input type="text" id="type" name="type" class="form-control" value="<?= $kamera['type']; ?>">
+                    <input type="text" id="type" name="type" class="form-control  <?= ($validation->hasError('type')) ? 'is-invalid' : ''; ?>" value="<?= $kamera['type']; ?>"
+                    autofocus value="<?= (old('type')) ? old('type') : $kamera['type']; ?>">
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('type'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="release_date">Tanggal rilis</label>
-                    <input type="date" id="release_date" name="release_date" class="form-control" value="<?= $kamera['release_date']; ?>">
+                    <input type="date" id="release_date" name="release_date" class="form-control" 
+                    value="<?= (old('release_date')) ? old('release_date') : $kamera['release_date']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="price">Harga Kamera</label>
-                    <input type="text" id="price" name="price" class="form-control" value="<?= $kamera['price']; ?>">
+                    <input type="text" id="price" name="price" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>" 
+                    value="<?= (old('price')) ? old('price') : $kamera['price']; ?>" autofocus>
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('price'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
@@ -63,17 +72,21 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Deskripsi</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"><?= $kamera['description']; ?></textarea>    
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control">
+                        <?= (old('description')) ? old('description') : $kamera['description']; ?>
+                    </textarea>    
                 </div>
             </div>
             <div class="tab-pane fade" id="example" role="tabpanel" aria-labelledby="example-tab">
                 <div class="form-group">
                     <label for="max_resolution">Max Resolusi</label>
-                    <input type="text" id="max_resolution" name="max_resolution" class="form-control" value="<?= $kamera['max_resolution']; ?>">
+                    <input type="text" id="max_resolution" name="max_resolution" class="form-control" 
+                    value="<?= (old('max_resolution')) ? old('max_resolution') : $kamera['max_resolution']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="pixels">Ukuran pixel</label>
-                    <input type="text" id="pixels" name="pixels" class="form-control" value="<?= $kamera['pixels']; ?>">
+                    <input type="text" id="pixels" name="pixels" class="form-control" 
+                    value="<?= (old('pixels')) ? old('pixels') : $kamera['pixels']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="sensor_size">Sensor size</label>
@@ -86,31 +99,38 @@
                 </div>
                 <div class="form-group">
                     <label for="iso">ISO</label>
-                    <input type="text" id="iso" name="iso" class="form-control" value="<?= $kamera['iso']; ?>">
+                    <input type="text" id="iso" name="iso" class="form-control" 
+                    value="<?= (old('iso')) ? old('iso') : $kamera['iso']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="lens">Lensa Mount</label>
-                    <input type="text" id="lens" name="lens" class="form-control" value="<?= $kamera['lens']; ?>">
+                    <input type="text" id="lens" name="lens" class="form-control" 
+                    value="<?= (old('lens')) ? old('lens') : $kamera['lens']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="focus">Jumlah titik fokus</label>
-                    <input type="text" id="focus" name="focus" class="form-control" value="<?= $kamera['focus']; ?>">
+                    <input type="text" id="focus" name="focus" class="form-control" 
+                    value="<?= (old('focus')) ? old('focus') : $kamera['focus']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="screen">Layar</label>
-                    <input type="text" id="screen" name="screen" class="form-control" value="<?= $kamera['screen']; ?>">
+                    <input type="text" id="screen" name="screen" class="form-control" 
+                    value="<?= (old('screen')) ? old('screen') : $kamera['screen']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="shutter">Shutter</label>
-                    <input type="text" id="shutter" name="shutter" class="form-control" value="<?= $kamera['shutter']; ?>">
+                    <input type="text" id="shutter" name="shutter" class="form-control" 
+                    value="<?= (old('shutter')) ? old('shutter') : $kamera['shutter']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight</label>
-                    <input type="text" id="weight" name="weight" class="form-control" value="<?= $kamera['weight']; ?>">
+                    <input type="text" id="weight" name="weight" class="form-control" 
+                    value="<?= (old('weight')) ? old('weight') : $kamera['weight']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="dimension">Dimensi</label>
-                    <input type="text" id="dimension" name="dimension" class="form-control" value="<?= $kamera['dimension']; ?>">
+                    <input type="text" id="dimension" name="dimension" class="form-control" 
+                    value="<?= (old('dimension')) ? old('dimension') : $kamera['dimension']; ?>">
                 </div>
             </div>
         </div>

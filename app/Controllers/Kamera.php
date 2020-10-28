@@ -122,10 +122,30 @@ class Kamera extends BaseController
     }
 
     public function update($id){
+        //cek judul
+        $oldData = $this->kameraModel->getKamera($this->request->getVar('slug'));
+        if ($oldData['type']==$this->request->getVar('type')) {
+            $rule_type = 'required';
+        }else{
+            $rule_type = 'required|is_unique[kamera.type]';
+        }
         if (!$this->validate([
-            ''
+            'type' => [
+                'rules'=> $rule_type,
+                'errors'=>[
+                    'required'=>'{field} kamera harus diisi.',
+                    'is_unique'=> '{field} Kamera sudah ada di database.'
+                ]
+            ],
+            'price'=>[
+                'rules'=> 'required',
+                'errors'=>[
+                    'required'=>'{field} kamera harus diisi.'
+                ]
+            ]
+
         ])) {
-            # code...
+            return redirect()->to('/kamera/edit/'.$this->request->getVar('slug'))->withInput();
         }
 
 
@@ -133,7 +153,7 @@ class Kamera extends BaseController
         $type = $this->request->getVar('type');
         $slug = url_title("$brand $type", '-', true);
         $this->kameraModel->save([
-            'id' => $id,
+            'id_kamera' => $id,
             'brand' => $this->request->getVar('brand'),
             'type'=> $this->request->getVar('type'),
             'slug'=>$slug,
