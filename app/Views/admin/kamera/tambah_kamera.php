@@ -35,15 +35,23 @@
                 </div>
                 <div class="form-group">
                     <label for="type">Tipe Kamera</label>
-                    <input type="text" id="type" name="type" class="form-control">
+                    <input value="<?= old('type'); ?>" type="text" id="type" name="type" class="form-control <?= ($validation->hasError('type')) ? 'is-invalid' : ''; ?>"
+                    autofocus >
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('type'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="release_date">Tanggal rilis</label>
-                    <input type="date" id="release_date" name="release_date" class="form-control">
+                    <input value="<?= old('release_date'); ?>" type="date" id="release_date" name="release_date" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="price">Harga Kamera</label>
-                    <input type="text" id="price" name="price" class="form-control">
+                    <input value="<?= old('price'); ?>" type="text" id="price" name="price" class="form-control <?= ($validation->hasError('price')) ? 'is-invalid' : ''; ?>"
+                    autofocus >
+                    <div class="invalid-feedback">
+                        <?= $validation->getError('price'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
@@ -54,23 +62,23 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-2">
-                            <img src="img/kamera/default.jpg" class="img-thumbnail img-preview">
+                            <img src="/img/kamera/default.jpg" class="img-thumbnail img-preview">
                         </div>
                     </div>     
                 </div>
                 <div class="form-group">
                     <label for="description">Deskripsi</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>    
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"><?= old('description'); ?></textarea>    
                 </div>
             </div>
             <div class="tab-pane fade" id="example" role="tabpanel" aria-labelledby="example-tab">
                 <div class="form-group">
                     <label for="max_resolution">Max Resolusi</label>
-                    <input type="text" id="max_resolution" name="max_resolution" class="form-control">
+                    <input value="<?= old('max_resolution'); ?>" type="text" id="max_resolution" name="max_resolution" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="pixels">Ukuran pixel</label>
-                    <input type="text" id="pixels" name="pixels" class="form-control">
+                    <input value="<?= old('pixels'); ?>" type="text" id="pixels" name="pixels" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="sensor_size">Sensor size</label>
@@ -81,31 +89,31 @@
                 </div>
                 <div class="form-group">
                     <label for="iso">ISO</label>
-                    <input type="text" id="iso" name="iso" class="form-control">
+                    <input value="<?= old('iso'); ?>" type="text" id="iso" name="iso" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="lens">Lensa Mount</label>
-                    <input type="text" id="lens" name="lens" class="form-control">
+                    <input value="<?= old('lens'); ?>" type="text" id="lens" name="lens" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="focus">Jumlah titik fokus</label>
-                    <input type="text" id="focus" name="focus" class="form-control">
+                    <input value="<?= old('focus'); ?>" type="text" id="focus" name="focus" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="screen">Layar</label>
-                    <input type="text" id="screen" name="screen" class="form-control">
+                    <input value="<?= old('screen'); ?>" type="text" id="screen" name="screen" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="shutter">Shutter</label>
-                    <input type="text" id="shutter" name="shutter" class="form-control">
+                    <input value="<?= old('shutter'); ?>" type="text" id="shutter" name="shutter" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight</label>
-                    <input type="text" id="weight" name="weight" class="form-control">
+                    <input value="<?= old('weight'); ?>" type="text" id="weight" name="weight" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="dimension">Dimensi</label>
-                    <input type="text" id="dimension" name="dimension" class="form-control">
+                    <input value="<?= old('dimension'); ?>" type="text" id="dimension" name="dimension" class="form-control">
                 </div>
             </div>
         </div>

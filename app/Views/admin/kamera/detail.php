@@ -3,20 +3,23 @@
 <?= $this->section('content'); ?>
 
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-12 col-lg-4">
         <div class="card mb-4 shadow">
             <div class="card-header h3 text-center"><?= $kamera['brand'].' '.$kamera['type']; ?></div>
-            <img src="/img/kamera/<?= $kamera['image']; ?>" alt="camera image" width="100%" height="300px" class="card-image">
+            <img src="/img/kamera/<?= $kamera['image']; ?>" alt="camera image" width="100%" height="100%" class="card-image">
             <div class="card-body">
                 <div class="card-title h5 text-center">Rp. <?= $kamera['price']; ?></div>
             </div>
+            <div class="card-footer">
+                <a href="/kamera/edit/<?= $kamera['slug']; ?>" class="btn btn-icon-split btn-warning">
+                    <span class="icon "><i class="fas fa-pen"></i></span>
+                    <span class="text">Edit data kamera</span>
+                </a>
+            </div>
         </div>
-        <a href="/kamera/edit/<?= $kamera['slug']; ?>" class="btn btn-icon-split btn-warning">
-            <span class="icon "><i class="fas fa-pen"></i></span>
-            <span class="text">Edit data kamera</span>
-        </a>
+        
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-lg-8">
         <div class="card shadow mb-4">
             <div class="card-header text-center">Deskripsi</div>
             <div class="card-body">
@@ -72,11 +75,6 @@
                 </table>
             </div>
         </div>
-    </div>
-    <div class="w-100">
-    <div class="col">
-       
-    </div>  
     </div>
 </div>
 

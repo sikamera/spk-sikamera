@@ -63,7 +63,7 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Deskripsi</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control" value="<?= $kamera['description']; ?>"></textarea>    
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"><?= $kamera['description']; ?></textarea>    
                 </div>
             </div>
             <div class="tab-pane fade" id="example" role="tabpanel" aria-labelledby="example-tab">
