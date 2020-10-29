@@ -9,17 +9,17 @@
     <link href="/theme/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/theme/css/style.css" rel="stylesheet">
 </head>
-<body id="page-top">
-    <div id="wrapper">
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <?= $this->include('/layouts/navbar'); ?>
-                <div class="container-fluid">
-                    <?= $this->renderSection('content'); ?>
-                </div>
-            </div>
-            <?= $this->include('/layouts/footer'); ?>
-        </div>
-    </div>
+<body>
+        <?= $this->include('/layouts/navbar'); ?>
+        <?= $this->renderSection('content'); ?>
+        <?= $this->include('/layouts/footer'); ?>
+    <script src="/theme/assets/jquery/jquery.min.js"></script>
+    <script src="/theme/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+     <!-- Core plugin JavaScript-->
+    <script src="/theme/assets/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/theme/js/sb-admin-2.min.js"></script>
 </body>
 </html>

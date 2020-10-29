@@ -10,7 +10,7 @@ class Home extends BaseController
 		$data = [
 			'judul' => 'Home'
 		];
-		return view('/index', $data);
+		return view('/pages/home', $data);
 	}
 
 	//--------------------------------------------------------------------
