@@ -27,13 +27,9 @@
                 
                 </div>
             </div>
-            <?= $this->include('admin/layout/footer'); ?>
         </div>
     </div>
-
-    <?= $this->include('admin/layout/buttonup'); ?>
-
-    <?= $this->include('admin/layout/modal'); ?>
+    <?= $this->include('layouts/footer'); ?>
    
 
     <!-- Bootstrap core JavaScript-->

@@ -16,7 +16,8 @@ class Kamera extends BaseController
           'judul' => 'Data Kamera',
           'kamera' => $this->kameraModel->getKamera()
       ];
-      return view('admin/kamera/index', $data);
+
+      return view('admin/kamera/index', $data);;
     }
 
     public function detail($slug)

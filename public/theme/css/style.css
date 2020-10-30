@@ -1,3 +1,19 @@
 .red-color {
     color: red;
 }
+
+.profile-img {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* .crop {
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.crop img {
+    margin: -75px 0 0 -100px;
+} */
