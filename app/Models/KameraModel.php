@@ -4,6 +4,7 @@ use CodeIgniter\Model;
 
 class KameraModel extends Model
 {
+
     protected $table = 'kamera';
     protected $primaryKey = 'id_kamera';
     protected $useTimestamps = true;
@@ -34,4 +35,14 @@ class KameraModel extends Model
         return $this->where(['slug' => $slug])->first();
     }
 
+    public function getKameraById($id)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('kamera');
+        $builder->select('id_kamera, brand, type, iso, pixels, sensor_size, focus, shutter, price');
+        $builder->where('id_kamera', $id);
+        $query = $builder->get()->getRowArray();
+
+        return $query;
+    }
 }

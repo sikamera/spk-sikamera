@@ -62,16 +62,16 @@
 
 <!-- Nav Item - Charts -->
 <li class="nav-item">
-  <a class="nav-link" href="charts.html">
+  <a class="nav-link" href="/alternative">
     <i class="fas fa-fw fa-chart-area"></i>
-    <span>Charts</span></a>
+    <span>Alternative</span></a>
 </li>
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-  <a class="nav-link" href="tables.html">
-    <i class="fas fa-fw fa-table"></i>
-    <span>Tables</span></a>
+  <a class="nav-link" href="">
+    <i class="fas fa-fw fa-equals"></i>
+    <span>Hasil</span></a>
 </li>
 
 <!-- Divider -->

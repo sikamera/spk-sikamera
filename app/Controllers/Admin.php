@@ -1,6 +1,5 @@
 <?php namespace App\Controllers;
 
-use App\Models\KriteriaModel;
 
 class Admin extends BaseController
 {

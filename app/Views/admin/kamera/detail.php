@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 <div class="row">
-    <div class="col-sm-12 col-lg-4">
+    <div class="col-sm-12 col-lg-6">
         <div class="card mb-4 shadow">
             <div class="card-header h3 text-center"><?= $kamera['brand'].' '.$kamera['type']; ?></div>
             <img src="/img/kamera/<?= $kamera['image']; ?>" alt="camera image" width="100%" height="100%" class="card-image">
@@ -15,11 +15,15 @@
                     <span class="icon "><i class="fas fa-pen"></i></span>
                     <span class="text">Edit data kamera</span>
                 </a>
+                <a href="/alternative/compare/<?= $kamera['id_kamera']; ?>" class="btn btn-icon-split btn-primary">
+                    <span class="icon "><i class="fas fa-plus"></i></span>
+                    <span class="text">Tambah Alternative</span>
+                </a>
             </div>
         </div>
         
     </div>
-    <div class="col-sm-12 col-lg-8">
+    <div class="col-sm-12 col-lg-6">
         <div class="card shadow mb-4">
             <div class="card-header text-center">Deskripsi</div>
             <div class="card-body">

@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 $routes->get('/admin', 'admin::index');
 $routes->get('/kamera/tambah_kamera', 'Kamera::tambah_kamera');
 $routes->get('/kamera/edit/(:segment)', 'Kamera::edit/$1');
+$routes->get('/alternative/compare/(:segment)', 'Alternative::compare/$1');
 $routes->delete('/users/(:num)', 'Users::delete/$1');
 $routes->delete('/kamera/(:num)', 'Kamera::delete/$1');
 $routes->get('/kamera/(:any)', 'Kamera::detail/$1');
