@@ -42,10 +42,10 @@ class Alternative extends BaseController
     public function delete($id = false)
     {
         if ($id == false) {
-            $this->alternative->delete();
+            $this->alternative->deleteAllData();
+        }else {
+            $this->alternative->delete($id);
         }
-
-        $this->alternative->delete($id);
         return redirect()->to('/alternative');
     }
 

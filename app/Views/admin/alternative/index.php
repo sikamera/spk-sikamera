@@ -12,8 +12,13 @@
             <span class="icon "><i class="fas fa-calculator"></i></span>
             <span class="text">Compare</span>
         </a>
+        <a href="/kamera" class="btn btn-icon-split btn-primary">
+            <span class="icon "><i class="fas fa-plus"></i></span>
+            <span class="text">Tambah data alternative</span>
+        </a>
     </div>
     <div class="card-body">
+        <?php if($alternative != null):?>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead class="thead-dark">
@@ -50,6 +55,10 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+        <?php else: ?>
+            <h1 class="text-center">Data alternative kosong</h1>
+            <h6 class="text-center h2">klik tambah untuk menambahkan data!</h6>
+        <?php endif; ?>
         </div>
     </div>
 </div>

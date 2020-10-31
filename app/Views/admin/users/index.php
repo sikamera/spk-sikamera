@@ -37,7 +37,7 @@
                             <td><?= $user['last_name']; ?></td>
                             <td><?= $user['username']; ?></td>
                             <td><?= $user['birthday']; ?></td>
-                            <td><?= $user['gender']; ?></td>
+                            <td><?= ($user['gender']== 'M') ? 'Male' : 'Female';?></td>
                             <td><?= $user['email']; ?></td>
                             <td><?= $user['password']; ?></td>
                             <td>

@@ -19,4 +19,11 @@ class AlternativeModel extends Model
     {
         return $this->findAll();
     }
+
+    public function deleteAllData()
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('alternative');
+        return $builder->emptyTable('alternative');
+    }
 }
