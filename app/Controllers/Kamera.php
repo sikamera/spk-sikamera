@@ -14,11 +14,12 @@ class Kamera extends BaseController
     {
       $data = [
           'judul' => 'Data Kamera',
-          'kamera' => $this->kameraModel->getKamera()
+          'kamera' => $this->kameraModel->getKamera(),
       ];
 
       return view('admin/kamera/index', $data);;
     }
+
 
     public function detail($slug)
     {
@@ -88,11 +89,13 @@ class Kamera extends BaseController
             'max_resolution'=> $this->request->getVar('max_resolution'),
             'pixels'=>$this->request->getVar('pixels'),
             'sensor_size'=>$this->request->getVar('sensor_size'),
-            'iso' => $this->request->getVar('iso'),
+            'min_iso' => $this->request->getVar('min_iso'),
+            'max_iso' => $this->request->getVar('max_iso'),
             'lens'=>$this->request->getVar('lens'),
             'focus'=>$this->request->getVar('focus'),
             'screen'=>$this->request->getVar('screen'),
-            'shutter'=>$this->request->getVar('shutter'),
+            'min_shutter'=>$this->request->getVar('min_shutter'),
+            'max_shutter'=>$this->request->getVar('max_shutter'),
             'weight'=>$this->request->getVar('weight'),
             'dimension'=>$this->request->getVar('dimension')
         ]);
@@ -178,11 +181,13 @@ class Kamera extends BaseController
             'max_resolution'=> $this->request->getVar('max_resolution'),
             'pixels'=>$this->request->getVar('pixels'),
             'sensor_size'=>$this->request->getVar('sensor_size'),
-            'iso' => $this->request->getVar('iso'),
+            'min_iso' => $this->request->getVar('min_iso'),
+            'max_iso'=> $this->request->getVar('max_iso'),
             'lens'=>$this->request->getVar('lens'),
             'focus'=>$this->request->getVar('focus'),
             'screen'=>$this->request->getVar('screen'),
-            'shutter'=>$this->request->getVar('shutter'),
+            'min_shutter'=>$this->request->getVar('min_shutter'),
+            'max_shutter'=>$this->request->getVar('max_shutter'),
             'weight'=>$this->request->getVar('weight'),
             'dimension'=>$this->request->getVar('dimension')
         ]);

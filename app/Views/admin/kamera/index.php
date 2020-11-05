@@ -14,7 +14,7 @@
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card shadow h-100">
                         <a href="/kamera/<?= $kam['slug']; ?>">
-                            <img src="/img/kamera/<?= $kam['image']; ?>" alt="thumbnail" class="card-img-top" width="50px" height="100%">
+                            <img src="/img/kamera/<?= $kam['image']; ?>" alt="thumbnail" class="card-img-top">
                         </a>
                         <div class="card-body">
                             <div class="card-title"><h3 class="text-center"><?= $kam['brand']." ".$kam['type']; ?></h3></div>

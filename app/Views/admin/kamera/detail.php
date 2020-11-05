@@ -49,7 +49,7 @@
                         </tr>
                         <tr class="text-center">
                             <td>ISO</td>
-                            <td><?= $kamera['iso']; ?></td>
+                            <td><?= $kamera['min_iso'].'-'.$kamera['max_iso'];?></td>
                         </tr>
                         <tr class="text-center">
                             <td>Lens Mount</td>
@@ -65,7 +65,7 @@
                         </tr>
                         <tr class="text-center">
                             <td>Shutter Speed</td>
-                            <td><?= $kamera['shutter']; ?></td>
+                            <td><?= $kamera['min_shutter'].'-'.$kamera['max_shutter']; ?></td>
                         </tr class="text-center">
                         <tr class="text-center">
                             <td>Berat</td>

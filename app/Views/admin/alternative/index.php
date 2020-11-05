@@ -8,7 +8,7 @@
             <span class="icon "><i class="fas fa-trash"></i></span>
             <span class="text">Reset data alternative</span>
         </a>
-        <a href="" class="btn btn-icon-split btn-success">
+        <a href="/matriks/penilaian" class="btn btn-icon-split btn-success">
             <span class="icon "><i class="fas fa-calculator"></i></span>
             <span class="text">Compare</span>
         </a>

@@ -18,11 +18,13 @@ class KameraModel extends Model
                                 'max_resolution',
                                 'pixels',
                                 'sensor_size',
-                                'iso',
+                                'min_iso',
+                                'max_iso',
                                 'lens',
                                 'focus',
                                 'screen',
-                                'shutter',
+                                'min_shutter',
+                                'max_shutter',
                                 'weight',
                                 'dimension'];
 
@@ -35,11 +37,25 @@ class KameraModel extends Model
         return $this->where(['slug' => $slug])->first();
     }
 
+    public function getKameraBy($value)
+    {
+        if ($value == 'nikon') {
+            return $this->where(['brand' => $value])->first();
+        }elseif ($value == 'canon') {
+            return $this->where(['brand' => $value])->first();
+        }elseif ($value == 'full frame') {
+            return $this->where(['sensor_size' => $value])->first();
+        } elseif ($value == 'crop frame') {
+            return $this->where(['sensor_size' => $value])->first();
+        }
+    }
+    
+
     public function getKameraById($id)
     {
         $db = \Config\Database::connect();
         $builder = $db->table('kamera');
-        $builder->select('id_kamera, brand, type, iso, pixels, sensor_size, focus, shutter, price');
+        $builder->select('id_kamera, brand, type, min_iso, max_iso, pixels, sensor_size, focus, min_shutter, max_shutter, price');
         $builder->where('id_kamera', $id);
         $query = $builder->get()->getRowArray();
 

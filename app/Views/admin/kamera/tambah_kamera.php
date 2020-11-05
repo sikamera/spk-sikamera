@@ -88,8 +88,12 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="iso">ISO</label>
-                    <input value="<?= old('iso'); ?>" type="text" id="iso" name="iso" class="form-control">
+                    <label for="min_iso">ISO Minimum</label>
+                    <input value="<?= old('min_iso'); ?>" type="text" id="min_iso" name="min_iso" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="max_iso">ISO Maksimum</label>
+                    <input value="<?= old('max_iso'); ?>" type="text" id="max_iso" name="max_iso" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="lens">Lensa Mount</label>
@@ -104,8 +108,12 @@
                     <input value="<?= old('screen'); ?>" type="text" id="screen" name="screen" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="shutter">Shutter</label>
-                    <input value="<?= old('shutter'); ?>" type="text" id="shutter" name="shutter" class="form-control">
+                    <label for="min_shutter">Shutter Minimum</label>
+                    <input value="<?= old('min_shutter'); ?>" type="text" id="min_shutter" name="min_shutter" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="max_shutter">Shutter Maksimum</label>
+                    <input value="<?= old('max_shutter'); ?>" type="text" id="max_shutter" name="max_shutter" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight</label>

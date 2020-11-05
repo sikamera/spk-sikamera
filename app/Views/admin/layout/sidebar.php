@@ -69,9 +69,9 @@
 
 <!-- Nav Item - Tables -->
 <li class="nav-item">
-  <a class="nav-link" href="">
+  <a class="nav-link" href="/matriks">
     <i class="fas fa-fw fa-equals"></i>
-    <span>Hasil</span></a>
+    <span>Proses Moora</span></a>
 </li>
 
 <!-- Divider -->

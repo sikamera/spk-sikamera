@@ -99,9 +99,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="iso">ISO</label>
-                    <input type="text" id="iso" name="iso" class="form-control" 
-                    value="<?= (old('iso')) ? old('iso') : $kamera['iso']; ?>">
+                    <label for="min_iso">ISO Minimum</label>
+                    <input type="text" id="min_iso" name="min_iso" class="form-control" 
+                    value="<?= (old('min_iso')) ? old('min_iso') : $kamera['min_iso']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="max_iso">ISO Maksimum</label>
+                    <input type="text" id="max_iso" name="max_iso" class="form-control" 
+                    value="<?= (old('max_iso')) ? old('max_iso') : $kamera['max_iso']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="lens">Lensa Mount</label>
@@ -119,9 +124,14 @@
                     value="<?= (old('screen')) ? old('screen') : $kamera['screen']; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="shutter">Shutter</label>
-                    <input type="text" id="shutter" name="shutter" class="form-control" 
-                    value="<?= (old('shutter')) ? old('shutter') : $kamera['shutter']; ?>">
+                    <label for="min_shutter">Shutter Minimum</label>
+                    <input type="text" id="min_shutter" name="min_shutter" class="form-control" 
+                    value="<?= (old('min_shutter')) ? old('min_shutter') : $kamera['min_shutter']; ?>">
+                </div>
+                <div class="form-group">
+                    <label for="max_shutter">Shutter Minimum</label>
+                    <input type="text" id="max_shutter" name="max_shutter" class="form-control" 
+                    value="<?= (old('max_shutter')) ? old('max_shutter') : $kamera['max_shutter']; ?>">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight</label>

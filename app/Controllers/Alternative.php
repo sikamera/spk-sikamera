@@ -2,15 +2,26 @@
 
 use App\Models\AlternativeModel;
 use App\Models\KameraModel;
+use App\Models\MatriksModel;
 
 class Alternative extends BaseController
 {
     protected $kamera;
     protected $alternative;
+    protected $matriks;
+
+    public $nilaiIso;
+    public $nilaiPixel;
+    public $nilaiSensor;
+    public $nilaiFocus;
+    public $nilaiShutter;
+    public $nilaiPrice;
+
 
     public function __construct() {
         $this->kamera = new KameraModel();
         $this->alternative = new AlternativeModel();
+        $this->matriksModel = new MatriksModel();
     }
 	public function index()
 	{
@@ -28,14 +39,13 @@ class Alternative extends BaseController
         $this->alternative->save([
             'id_kamera' => $dataKamera['id_kamera'],
             'kamera' => $brandtype,
-            'iso' => $dataKamera['iso'],
+            'iso' => $dataKamera['max_iso'],
             'pixels' => $dataKamera['pixels'],
             'sensor_size' => $dataKamera['sensor_size'],
             'focus' => $dataKamera['focus'],
-            'shutter' => $dataKamera['shutter'],
+            'shutter' => $dataKamera['max_shutter'],
             'price' => $dataKamera['price']
         ]);
-     
         return redirect()->to('/alternative');
     }
 
