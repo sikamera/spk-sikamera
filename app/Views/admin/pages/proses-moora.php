@@ -10,13 +10,48 @@
         <a class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Matrik Keputusan
         </a>
-        <div class="float-right"> <i class="fas fa-chevron-circle-down float-right"></i></div>
+        <div class="float-right"> 
+          <a class="btn btn-lg btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           <i class="fas fa-chevron-circle-down float-right"></i>
+          </a>
+        </div>
       </h2>
     </div>
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Alternatif</th>
+                <?php 
+
+                  foreach ($kriteria as $key => $value) {
+                    echo "<th>".$value[1].' ('.$value[0].")</th>";
+                  }
+                
+                ?>
+              </tr>
+            </thead>
+            <tbody>
+                <?php 
+
+                  foreach ($matriks as $key => $value) {
+                    echo "<tr>";
+                    echo "<td>".$alternative[$key][0]."</td>";
+                    for ($i=1; $i<=count($value) ; $i++) { 
+                      echo "<td>".$value[$i]."</td>";
+                    }
+                    echo "</tr>";
+                  }
+            
+                ?>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -26,12 +61,47 @@
         <a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Matrik Normalisasi
         </a>
-        <div class="float-right"> <i class="fas fa-chevron-circle-down float-right"></i></div>
+        <div class="float-right"> 
+          <a class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fas fa-chevron-circle-down float-right"></i>
+          </a>
+        </div>
       </h2>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Alternatif</th>
+                <?php 
+
+                  foreach ($kriteria as $key => $value) {
+                    echo "<th>".$value[1].' ('.$value[0].")</th>";
+                  }
+                
+                ?>
+              </tr>
+            </thead>
+            <tbody>
+                <?php 
+
+                  foreach ($normalisasi as $key => $value) {
+                    echo "<tr>";
+                    echo "<td>".$alternative[$key][0]."</td>";
+                    for ($i=1; $i<=count($value) ; $i++) { 
+                      echo "<td>".$value[$i]."</td>";
+                    }
+                    echo "</tr>";
+                  }
+            
+                ?>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -41,12 +111,36 @@
         <a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Nilai Optimasi
         </a>
-        <div class="float-right"> <i class="fas fa-chevron-circle-down float-right"></i></div>
+        <div class="float-right"> 
+          <a class="btn btn-link btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <i class="fas fa-chevron-circle-down float-right"></i>
+          </a>
+        </div>
       </h2>
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Alternatif</th>
+                <th>Nilai Optimasi</th>
+              </tr>
+            </thead>
+            <tbody>
+                <?php 
+                  foreach ($optimasi as $key => $value) {
+                    echo "<tr>";
+                    echo "<td>".$alternative[$key][0]."</td>";
+                    echo "<td>".$value."</td>";
+                    echo "</tr>";
+                  }
+                ?>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

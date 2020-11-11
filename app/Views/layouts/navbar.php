@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="" class="nav-link">Home</a>
+          <a href="/home" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a href="/home/catalog" class="nav-link">Catalog</a>

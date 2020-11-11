@@ -16,11 +16,11 @@ class Home extends BaseController
 		return view('/pages/home', $data);
 	}
 
-	public function catalog($value)
+	public function catalog()
 	{
 		$data = [
 			'judul' => 'katalog kamera',
-			'catalog' => $this->catalogModel->getKameraBy()
+			'catalog' => $this->catalogModel->getKamera()
 		];
 		
 		return view('pages/catalog', $data);
