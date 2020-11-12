@@ -49,12 +49,12 @@
             <div class="image-wrapp">
               <img src="/img/kamera/<?= $cat['image']; ?>" alt="katalog name" title="" />
               <article class="da-animate da-slideFromRight">
-                <a class="zoom" data-pretty="prettyPhoto" href="/img/kamera/<?= $cat['image']; ?>">
+                    <a class="zoom" data-pretty="prettyPhoto" href="/img/kamera/<?= $cat['image']; ?>">
                         <i class="icon-bg-light icon-zoom-in icon-circled icon-2x"></i>
-                        </a>
-                <a href="portfolio-detail.html">
+                    </a>
+                    <a href="/home/detail/<?= $cat['slug']; ?>">
                         <i class="icon-bg-light icon-link icon-circled icon-2x"></i>
-                        </a>
+                    </a>
               </article>
             </div>
             <div class="desc">

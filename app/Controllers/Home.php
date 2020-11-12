@@ -26,6 +26,35 @@ class Home extends BaseController
 		return view('pages/catalog', $data);
 	}
 
+	public function detail($slug)
+	{
+		$data = [
+            'judul' => 'Detail Kamera',
+            'kamera' => $this->catalogModel->getKamera($slug)
+        ];
+        if (empty($data['kamera'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException($slug. ' tidak ditemukan!');
+        }
+        return view('pages/detail', $data);
+	}
+
+	public function blog()
+	{
+		$data = [
+            'judul' => 'Blog'
+		];
+		
+		return view('pages/blog', $data);
+	}
+
+	public function moora()
+	{
+		$data = [
+            'judul' => 'Proses SPK'
+		];
+		return view('pages/spk', $data);
+	}
+
 	//--------------------------------------------------------------------
 
 }

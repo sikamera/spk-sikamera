@@ -5,13 +5,11 @@
         <div class="row">
           <div class="span4">
             <div class="widget">
-              <h5>Interesting pages</h5>
+              <h5>Halaman lainnya</h5>
               <ul class="regular">
-                <li><a href="#">About our company</a></li>
-                <li><a href="#">How we do all stuff</a></li>
-                <li><a href="#">Our recent works</a></li>
-                <li><a href="#">Press releases</a></li>
-                <li><a href="#">Get in touch with us</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Grup</a></li>
+                <li><a href="#">Kontak</a></li>
               </ul>
             </div>
           </div>
@@ -27,25 +25,11 @@
           </div>
           <div class="span4">
             <div class="widget">
-              <h5>How to find us</h5>
-              <address>
-								<i class="icon-home"></i> <strong>Lumia company, Inc.</strong><br>
-								X104 Awesome ville, Suite AB12<br>
-								Jakarta 12420 Indonesia
-								</address>
-              <p>
-                <i class="icon-phone"></i> (123) 456-7890 - (123) 555-8890<br>
-                <i class="icon-envelope-alt"></i> email@domainname.com
+              <h5>Tentang Kami</h5>
+              <p>ini adalah website sistem informasi yang berisi mengenai kamera
+                selain itu terdapat sebuah perhitungan pendukung keputusan untuk memilih kamera
+                sesuai yang diinginkan pengguna.
               </p>
-            </div>
-            <div class="widget">
-              <ul class="social">
-                <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square icon-32"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square icon-32"></i></a></li>
-              </ul>
             </div>
           </div>
         </div>
