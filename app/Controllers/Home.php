@@ -1,10 +1,13 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use App\Models\KameraModel;
 
 class Home extends BaseController
 {
-	public function __construct() {
+	public function __construct()
+	{
 		$this->catalogModel = new KameraModel();
 	}
 
@@ -16,13 +19,13 @@ class Home extends BaseController
 		return view('/pages/home', $data);
 	}
 
-	public function catalog($value)
+	public function catalog()
 	{
 		$data = [
 			'judul' => 'katalog kamera',
-			'catalog' => $this->catalogModel->getKameraBy()
+			'catalog' => $this->catalogModel->getKamera()
 		];
-		
+
 		return view('pages/catalog', $data);
 	}
 
