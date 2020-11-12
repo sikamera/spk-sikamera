@@ -3,57 +3,88 @@
 
 <?= $this->section('content'); ?>
 
-<div class="container">
-    <div class="text-center my-4 mb-4">
-        <h1>Katalog Kamera</h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-2 mb-2">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Brand Kamera
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Canon</a>
-                    <a class="dropdown-item" href="#">Nikon</a>
-                </div>
+ <!-- Subhead
+================================================== -->
+<section id="subintro">
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <ul class="breadcrumb">
+              <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+              <li><a href="#">Kamera</a><i class="icon-angle-right"></i></li>
+              <li class="active">Catalog</li>
+            </ul>
+          </div>
+          <div class="span4">
+            <div class="search">
+              <form class="input-append">
+                <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Search here.." />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </form>
             </div>
+          </div>
         </div>
-        <div class="col-lg-2 mb2">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tipe sensor
-                </a>
+      </div>
+    </section>
 
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Crop Frame</a>
-                    <a class="dropdown-item" href="#">Full Frame</a>
-                </div>
-            </div>
+<section id="maincontent">
+<div class="container">
+   <div class="row">
+          <div class="span12">
+            <ul class="filter">
+              <li class="all active"><a href="#" class="btn">All categories</a></li>
+              <li class="nikon"><a href="#" class="btn">Nikon</a></li>
+              <li class="canon"><a href="#" class="btn">Canon</a></li>
+              <li class="fullFrame"><a href="#" class="btn">Full Frame</a></li>
+              <li class="cropFrame"><a href="#" class="btn">Crop Frame</a></li>
+            </ul>
         </div>
     </div>
-    <div class="row my-4">
+  <div class="row">
+    <ul class="portfolio-area da-thumbs">
         <?php foreach($catalog as $cat): ?>
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100 shadow">
-                <a href="">
-                    <img class="card-img-top" src="/img/kamera/<?= $cat['image']; ?>" alt="thumbnail kamera">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#"><?= $cat['brand'].' '.$cat['type']; ?></a>
-                    </h4>
-                    <?php 
-                        $slice = substr($cat['description'],0,17);
-                    ?>
-                    <p class="card-text"><?= $slice; ?>
-                    ...<a href="">selengkapnya</a></p>
-                </div>
+      <li class="portfolio-item" data-id="id-0" data-type="<?= $cat['brand']; ?>">
+        <div class="span3">
+          <div class="thumbnail">
+            <div class="image-wrapp">
+              <img src="/img/kamera/<?= $cat['image']; ?>" alt="katalog name" title="" />
+              <article class="da-animate da-slideFromRight">
+                <a class="zoom" data-pretty="prettyPhoto" href="/img/kamera/<?= $cat['image']; ?>">
+                        <i class="icon-bg-light icon-zoom-in icon-circled icon-2x"></i>
+                        </a>
+                <a href="portfolio-detail.html">
+                        <i class="icon-bg-light icon-link icon-circled icon-2x"></i>
+                        </a>
+              </article>
             </div>
+            <div class="desc">
+              <h5><i class="icon-file"></i> <strong><?= $cat['brand'].' '.$cat['type']; ?></strong></h5>
+              <p><?= substr($cat['description'],0,17); ?>...</p>
+            </div>
+          </div>
         </div>
-        <?php endforeach; ?>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+
+  </div>
+  <div class="row">
+    <div class="span12">
+        <div class="pagination">
+            <ul>
+                <li><a href="#">Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
     </div>
+  </div>
+
 </div>
+</section>
 
 
 <?= $this->endSection(); ?>

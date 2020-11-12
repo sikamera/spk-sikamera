@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sikamera | <?= $judul; ?></title>
-    <link href="/theme/assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="/theme/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="/theme/css/style.css" rel="stylesheet">
+    <link href="/theme/lumia/css/bootstrap.css" rel="stylesheet">
+    <link href="/theme/lumia/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/theme/lumia/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/theme/lumia/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="/theme/lumia/css/flexslider.css" rel="stylesheet">
+    <link href="/theme/lumia/css/style.css" rel="stylesheet">
+    <link href="/theme/lumia/color/default.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
 </head>
-<body id="page-top">
-
+<body>
     <div id="wrapper">
-
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <div id="content">
-
-                <?= $this->include('layouts/navbar'); ?>
-
-                <div class="container-fluid">
-
-                    <?= $this->renderSection('content'); ?>
-        
-                </div>
-            </div>
-            <?= $this->include('admin/layout/footer'); ?>
-        </div>
+        <header>
+            <?= $this->include('layouts/navbar'); ?>
+        </header>
+        <?= $this->renderSection('content'); ?>
+        <?= $this->include('layouts/footer'); ?>
     </div>
+   
+  
+    
 
-    <script src="/theme/assets/jquery/jquery.min.js"></script>
-    <script src="/theme/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-     <!-- Core plugin JavaScript-->
-    <script src="/theme/assets/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="/theme/js/sb-admin-2.min.js"></script>
+    <script src="/theme/lumia/js/jquery.js"></script>
+    <script src="/theme/lumia/js/raphael-min.js"></script>
+    <script src="/theme/lumia/js/jquery.easing.1.3.js"></script>
+    <script src="/theme/lumia/js/bootstrap.js"></script>
+    <script src="/theme/lumia/js/google-code-prettify/prettify.js"></script>
+    <script src="/theme/lumia/js/jquery.elastislide.js"></script>
+    <script src="/theme/lumia/js/jquery.prettyPhoto.js"></script>
+    <script src="/theme/lumia/js/jquery.flexslider.js"></script>
+    <script src="/theme/lumia/js/jquery-hover-effect.js"></script>
+    <script src="/theme/lumia/js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="/theme/lumia/js/custom.js"></script>
 </body>
 </html>

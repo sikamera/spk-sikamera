@@ -37,6 +37,7 @@ $routes->get('/alternative/compare/(:segment)', 'Alternative::compare/$1');
 $routes->delete('/users/(:num)', 'Users::delete/$1');
 $routes->delete('/kamera/(:num)', 'Kamera::delete/$1');
 $routes->get('/kamera/(:any)', 'Kamera::detail/$1');
+$routes->get('/katalog','Home::catalog');
 
 
 /**

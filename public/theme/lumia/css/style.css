@@ -765,6 +765,14 @@ ul.filter li.active a{
 	padding:0;
 }
 
+.portfolio-area li:hover .desc {
+	-moz-transition: all 0.2s ease-in-out 0s;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-o-transition: all 0.2s ease-in-out 0s;
+	-ms-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+}
+
 .portfolio-area li div {
 	margin-bottom:10px;
 }
@@ -813,6 +821,7 @@ ul.filter li.active a{
 
 .portfolio-area .image-wrapp img,
 .portfolio-home .image-wrapp img{
+	object-fit: cover;
 	margin:0;
 	padding:0;
 }
