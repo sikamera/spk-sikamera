@@ -38,6 +38,8 @@ $routes->delete('/users/(:num)', 'Users::delete/$1');
 $routes->delete('/kamera/(:num)', 'Kamera::delete/$1');
 $routes->get('/kamera/(:any)', 'Kamera::detail/$1');
 $routes->get('/katalog','Home::catalog');
+$routes->get('/login', 'Auth::index');
+$routes->get('/register', 'Auth::register');
 
 
 /**

@@ -137,7 +137,7 @@ class Matriks extends BaseController
             }
 
             if (doubleval( $alt['shutter']) <= 1/16000) {
-                $nilaishutter = 5;
+                $nilaiShutter = 5;
             }elseif (doubleval( $alt['shutter']) <= 1/8000) {
                 $nilaiShutter = 4;
             }elseif (doubleval( $alt['shutter']) <= 1/4000) {

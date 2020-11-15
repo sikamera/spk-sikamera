@@ -9,28 +9,10 @@
     <link href="/theme/sbootstrap/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/theme/sbootstrap/css/style.css" rel="stylesheet">
 </head>
-<body id="page-top"> 
+<body class="bg-gradient-info"> 
 
-    <div id="wrapper">
+    <?= $this->renderSection('auth'); ?>
 
-        <?= $this->include('admin/layout/sidebar'); ?>
-
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <div id="content">
-
-                <?= $this->include('admin/layout/navbar'); ?>
-
-                <div class="container-fluid">
-
-                    <?= $this->renderSection('content'); ?>
-                
-                </div>
-            </div>
-        </div>
-    </div>
-    <?= $this->include('admin/layout/footer'); ?>
-   
 
     <!-- Bootstrap core JavaScript-->
   <script src="/theme/sbootstrap/assets/jquery/jquery.min.js"></script>
@@ -48,23 +30,5 @@
   <!-- Page level custom scripts -->
   <script src="theme/sbootstrap/js/demo/chart-area-demo.js"></script>
   <script src="theme/sbootstrap/js/demo/chart-pie-demo.js"></script>
-
-  <script>
-      const preview = ()=>{
-            const image = document.querySelector('#image')
-            const label = document.querySelector('.custom-file-label')
-            const imgPreview = document.querySelector('.img-preview')
-
-            label.textContent = image.files[0].name;
-
-            const fileImg = new FileReader();
-            fileImg.readAsDataURL(image.files[0]);
-
-            fileImg.onload = (e)=>{
-                imgPreview.src = e.target.result;
-            }
-        }
-     
-  </script>
 </body>
 </html>

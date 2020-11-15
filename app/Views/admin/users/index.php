@@ -36,10 +36,23 @@
                             <td><?= $user['first_name']; ?></td>
                             <td><?= $user['last_name']; ?></td>
                             <td><?= $user['username']; ?></td>
-                            <td><?= $user['birthday']; ?></td>
-                            <td><?= ($user['gender']== 'M') ? 'Male' : 'Female';?></td>
+                            <td><?= ($user['birthday']==null)?'-': $user['birthday']; ?></td>
+                            <td>
+                                <?php 
+                                    if ($user['gender']!=null) {
+                                        if ($user['gender']=="M") {
+                                            echo "Male";
+                                        }else {
+                                            echo "Female";
+                                        }
+                                    }else {
+                                        echo "-";
+                                    }
+                                
+                                ?>
+                            </td>
                             <td><?= $user['email']; ?></td>
-                            <td><?= $user['password']; ?></td>
+                            <td><?= ($user['password']!= null)?'********':'null'; ?></td>
                             <td>
                             <form action="/users/<?= $user['id_user']; ?>" method="post">
                                 <?= csrf_field(); ?>
