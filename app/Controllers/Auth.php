@@ -7,6 +7,7 @@ class Auth extends BaseController
 	public function __construct() {
 		$this->validation = \Config\Services::validation();
 		$this->userModel = new UsersModel();
+		$this->db = \Config\Database::connect();
 	}
 
 	public function index()
@@ -36,7 +37,41 @@ class Auth extends BaseController
 		])) {
 			return redirect()->to('/auth')->withInput()->with('validation',$this->validation);
 		}
+		$username = $this->request->getVar('username');
+		$password = $this->request->getVar('password');
+		$builder = $this->db->table('users');
+		$user = $builder->getWhere(['username'=>$username])->getRowArray();
 
+		if ($user) {
+			if ($user['password']==$password) {
+				$data = [
+					'firstname'=> $user['first_name'],
+					'lastname'=> $user['last_name'],
+					'username'=>$user['username'],
+					'role'=>$user['role']
+				];
+				session()->set($data);
+				if ($user['role']=='admin') {
+					return redirect()->to('/admin');
+				}else{
+					return redirect()->to('/home');
+				}
+			}else {
+				session()->setFlashdata('message', '
+				<div class="alert alert-danger" role="alert">
+					  password yang anda masukkan salah!
+				</div>
+				');
+				return redirect()->to('/auth');
+			}			
+		}else {
+			session()->setFlashdata('message', '
+			<div class="alert alert-danger" role="alert">
+				  username tidak terdaftar!
+			</div>
+			');
+			return redirect()->to('/auth');
+		}
 
 	}
 
@@ -89,15 +124,14 @@ class Auth extends BaseController
 		$firstname = $this->request->getVar('firstname');
 		$lastname = $this->request->getVar('lastname');
 		$username = url_title("$firstname $lastname",'_',true);
-		$passwordEncrypt = md5($this->request->getVar('password'));
-
+		$passwordHash = $this->request->getVar('password');
 
 		$this->userModel->save([
 			'first_name' => $this->request->getVar('firstname'),
 			'last_name' => $this->request->getVar('lastname'),
 			'username' => $username,
 			'email' => $this->request->getVar('email'),
-			'password'=> $passwordEncrypt,
+			'password'=> $this->request->getVar('password'),
 			'role'=> 'user'
 		]);
 		session()->setFlashdata('message', '
