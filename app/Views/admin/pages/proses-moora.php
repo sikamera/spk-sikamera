@@ -192,4 +192,25 @@
   </div>
 </div>
 
+  <div class="card shadow mb-4 mt-4">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-lg-6 col-xl-6">
+            <h5 class="mt-2 font-weight-bold text-info"> <b> Hasil Rekomendasi </b></h5>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <?php
+        arsort($optimasi);
+        $index = key($optimasi);
+        $hasil_alternatif = empty($alternative[$index][0]) ? 'Belum ada!' : $alternative[$index][0];
+        $hasil_optimasi = empty($optimasi[$index]) ? 'Belum ada!' : $optimasi[$index];
+
+        echo "Hasilnya adalah alternatif <b>".$hasil_alternatif."</b> ";
+        echo "dengan nilai optimasi <b>".$hasil_optimasi."</b> yang terpilih";
+        ?>
+      </div>
+    </div>
+
 <?= $this->endSection(); ?>
