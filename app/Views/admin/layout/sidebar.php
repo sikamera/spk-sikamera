@@ -60,13 +60,6 @@
   </a>
 </li>
 
-<!-- Nav Item - Charts -->
-<li class="nav-item">
-  <a class="nav-link" href="/alternative">
-    <i class="fas fa-fw fa-chart-area"></i>
-    <span>Alternative</span></a>
-</li>
-
 <!-- Nav Item - Tables -->
 <li class="nav-item">
   <a class="nav-link" href="/matriks">

@@ -3,6 +3,52 @@
 
 <?= $this->section('content'); ?>
 
+<div class="card shadow mb-4">
+    <div class="card-header py-6">
+        <a href="/alternative/delete" class="btn btn-icon-split btn-danger">
+            <span class="icon "><i class="fas fa-trash"></i></span>
+            <span class="text">Reset data alternative</span>
+        </a>
+        <a href="/kamera" class="btn btn-icon-split btn-primary">
+            <span class="icon "><i class="fas fa-plus"></i></span>
+            <span class="text">Tambah data alternative</span>
+        </a>
+    </div>
+    <div class="card-body">
+        <?php if($alternative != null):?>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Alternatif</th>
+                        <?php foreach ($kriteria as $key => $value) {
+                          echo "<th>".$value[1]."</th>";
+                        } ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                      $index = 1;
+                      foreach ($alternative as $alt => $nilai) {
+                          echo "<tr>";
+                          echo "<td>".$index++."</td>";
+                          for ($i=0; $i < count($nilai) ; $i++) { 
+                            echo "<td>".$nilai[$i]."</td>";
+                          }
+                          echo "</tr>";
+                      }
+                    ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <h1 class="text-center">Data alternative kosong</h1>
+            <h6 class="text-center h2">klik tambah untuk menambahkan data!</h6>
+        <?php endif; ?>
+        </div>
+    </div>
+</div>
+
 <div class="accordion" id="accordionExample">
   <div class="card">
     <div class="card-header bg-info text-white" id="headingOne">
