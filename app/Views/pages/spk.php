@@ -19,7 +19,7 @@
       <div class="row">
       <div class="card">
         <div class="card-header">
-          <a href="/alternative/delete" class="btn btn-danger"><i class="icon-minus-sign"></i> Reset data</a>
+          <a href="/home/delete" class="btn btn-danger"><i class="icon-minus-sign"></i> Reset data</a>
           <a href="/katalog" class="btn btn-success"><i class="icon-tasks"></i> Compare</a>
         </div>
         <div class="card-body">
@@ -147,6 +147,23 @@
               </div>
             </div>
           </div>
+          <div class="row">          
+            <div class="card shadow mb-4 mt-4">
+              <div class="card-header">
+                <h5 class="mt-2 font-weight-bold text-info"> <b> Hasil Rekomendasi </b></h5>
+              </div>
+              <div class="card-body">
+              <?php
+                arsort($optimasi);
+                $index = key($optimasi);
+                $hasil_alternatif = empty($alternative[$index][0]) ? 'Belum ada!' : $alternative[$index][0];
+                $hasil_optimasi = empty($optimasi[$index]) ? 'Belum ada!' : $optimasi[$index];
+                echo "Hasilnya adalah alternatif <b>".$hasil_alternatif."</b> ";
+                echo "dengan nilai optimasi <b>".$hasil_optimasi."</b> yang terpilih";
+              ?>
+          </div>
+          </div>
+    </div>
         <?php else: ?>
           <div class="row">
             <h1 class="text-center">Data kosong</h1>
