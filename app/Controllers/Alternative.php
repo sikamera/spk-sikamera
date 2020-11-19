@@ -142,7 +142,7 @@ class Alternative extends BaseController
                ]);
             }
             
-        }    
+        }
         return redirect()->to('/matriks');
     }
 

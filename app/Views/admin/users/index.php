@@ -32,11 +32,11 @@
                     <?php foreach($users as $user): ?>
                         <tr>
                             <td><?= $index++; ?></th>
-                            <td><img src="<?=$user['image']; ?>" alt="image"></td>
+                            <td><img class="rounded-circle" width="60px" height="60px" src="img/profile/<?= $user['image']; ?>" alt="image"></td>
                             <td><?= $user['first_name']; ?></td>
                             <td><?= $user['last_name']; ?></td>
                             <td><?= $user['username']; ?></td>
-                            <td><?= ($user['birthday']==null)?'-': $user['birthday']; ?></td>
+                            <td><?= ($user['birthday']==null)?'Undefined': $user['birthday']; ?></td>
                             <td>
                                 <?php 
                                     if ($user['gender']!=null) {
@@ -46,7 +46,7 @@
                                             echo "Female";
                                         }
                                     }else {
-                                        echo "-";
+                                        echo "Undefined";
                                     }
                                 
                                 ?>

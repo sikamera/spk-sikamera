@@ -58,6 +58,7 @@
                           <li><label>Kecepatan Shutter  : </label><?= $kamera['min_shutter'].'-'.$kamera['max_shutter']; ?></li>
                           <li><label>Berat              : </label><?= $kamera['weight']; ?> gram</li>
                           <li><label>Dimensi            : </label><?= $kamera['dimension']; ?> mm</li>
+                          <li class="text-center"><a href="/home/compare/<?= $kamera['id_kamera']; ?>" class="btn btn-primary"><i class="icon-tasks"></i>Compare</a></li>
                         </ul>
                       </div>
                     </div>

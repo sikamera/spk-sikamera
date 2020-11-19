@@ -16,6 +16,7 @@ class Matriks extends BaseController
         $this->criteriaModel = new KriteriaModel();
         $this->matriksModel = new MatriksModel();
     }
+    
 
     public function index()
     {
@@ -77,5 +78,7 @@ class Matriks extends BaseController
 
         return view('admin/pages/proses-moora', $data);
     }
+
+
 
 }

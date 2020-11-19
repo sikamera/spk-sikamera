@@ -37,8 +37,7 @@ class Users extends BaseController
             'username'=>$this->request->getVar('username'),
             'email'=>$this->request->getVar('email'),
             'password'=>$this->request->getVar('password'),
-            'birthday'=>$this->request->getVar('birthday'),
-            'gender'=>$this->request->getVar('gender')
+            'id_role' => 2
         ]);
         return redirect()->to('/users');
     }

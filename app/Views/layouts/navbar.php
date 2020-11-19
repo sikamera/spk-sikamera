@@ -17,7 +17,7 @@
                     <a href="/home"><i class="icon-home"></i> Home </a>
                   </li>
                   <li>
-                    <a href="/home/moora"><i class="icon-cog"></i>SPK</a>
+                    <a href="<?= (session()->get('username')) ? "/home/moora" : "/auth"  ?>"><i class="icon-cog"></i>SPK</a>
                   </li>
                   <li>
                     <a href="/katalog"><i class="icon-camera"></i> Kamera</i></a>
@@ -25,9 +25,17 @@
                   <li>
                     <a href="/home/blog"><i class="icon-book"></i> Blog</a>
                   </li>
+                  <?php 
+                  $session = session();
+                  if($session->get('username')): ?>
+                  <li>
+                    <a href="#"><i class="icon-user"></i><?= $session->get('username'); ?></a>
+                  </li>
+                  <?php else: ?>
                   <li>
                     <a href="/login"><i class="icon-user"></i>Login</a>
                   </li>
+                  <?php endif; ?>
                 </ul>
               </nav>
             </div>

@@ -40,18 +40,20 @@ class Auth extends BaseController
 		$username = $this->request->getVar('username');
 		$password = $this->request->getVar('password');
 		$builder = $this->db->table('users');
+		$session = session();
 		$user = $builder->getWhere(['username'=>$username])->getRowArray();
 
 		if ($user) {
-			if ($user['password']==$password) {
+			if (password_verify($password, $user['password'])) {
 				$data = [
 					'firstname'=> $user['first_name'],
 					'lastname'=> $user['last_name'],
+					'image'=>$user['image'],
 					'username'=>$user['username'],
-					'role'=>$user['role']
+					'role'=>$user['id_role']
 				];
-				session()->set($data);
-				if ($user['role']=='admin') {
+				$session->set($data);
+				if ($user['id_role']==1) {
 					return redirect()->to('/admin');
 				}else{
 					return redirect()->to('/home');
@@ -123,16 +125,17 @@ class Auth extends BaseController
 		}
 		$firstname = $this->request->getVar('firstname');
 		$lastname = $this->request->getVar('lastname');
-		$username = url_title("$firstname $lastname",'_',true);
+		$username = $firstname.$lastname;
 		$passwordHash = $this->request->getVar('password');
 
 		$this->userModel->save([
 			'first_name' => $this->request->getVar('firstname'),
 			'last_name' => $this->request->getVar('lastname'),
 			'username' => $username,
+			'image' => "default.jpg",
 			'email' => $this->request->getVar('email'),
-			'password'=> $this->request->getVar('password'),
-			'role'=> 'user'
+			'password'=> password_hash($passwordHash, PASSWORD_DEFAULT),
+			'id_role'=> 2
 		]);
 		session()->setFlashdata('message', '
 		<div class="alert alert-success" role="alert">
@@ -140,6 +143,14 @@ class Auth extends BaseController
 		</div>
 		');
 		return redirect()->to('/auth');
+	}
+
+	public function logout()
+	{
+		$session = session();
+		$session->destroy();
+		
+		return redirect()->to('/home');
 	}
 
 	//--------------------------------------------------------------------
