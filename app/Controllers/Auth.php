@@ -149,7 +149,9 @@ class Auth extends BaseController
 	{
 		$session = session();
 		$session->destroy();
-		
+
+		$home = new Home();
+		$home->delete();
 		return redirect()->to('/home');
 	}
 

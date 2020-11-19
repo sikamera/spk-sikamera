@@ -28,8 +28,11 @@
                   <?php 
                   $session = session();
                   if($session->get('username')): ?>
-                  <li>
+                  <li class="dropdown">
                     <a href="#"><i class="icon-user"></i><?= $session->get('username'); ?></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/auth/logout">Logout</a></li>
+                    </ul>
                   </li>
                   <?php else: ?>
                   <li>

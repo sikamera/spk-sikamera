@@ -229,9 +229,9 @@ class Home extends BaseController
     public function delete($id = false)
     {
         if ($id == false) {
-            $this->alternative->deleteAllData();
+            $this->alternativeModel->deleteAllData();
         }else {
-            $this->alternative->delete($id);
+            $this->alternativeModel->delete($id);
         }
         return redirect()->to('/home/moora');
     }
